@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------
+                                共通パーツ
+-------------------------------------------------------------------- */
+@font-face {
+    font-family: "せのびレギュラー";
+    src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
+}
+
+@font-face {
+    font-family: "HarenosoraMincho";
+    src: url("../fonts/Harenosora.otf");
+}
+
+.navbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: linear-gradient(#355469 0%, #1b2a35 100%);
+    color: #fff;
+}
+@media (max-width: 500px) {
+    .container {
+        padding-top: 30px;
+    }
+}
+
+.auth-text {
+    margin-bottom: 23px;
+    font-family: "HarenosoraMincho";
+    font-size: 18px;
+    text-align: center;
+}
+@media (max-width: 500px) {
+    .auth-text {
+        font-size: 20px;
+    }
+}
+
+h1 {
+    width: 90px;
+    margin: 0 auto 63px;
+}
+@media (max-width: 500px) {
+    h1 {
+        width: 110px;
+        margin-bottom: 40px;
+    }
+}
+
+h1 a {
+    display: block;
+    width: 100%;
+    font-family: "せのびレギュラー";
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 5px 4px 3px #000;
+    text-decoration: none;
+}
+@media (max-width: 500px) {
+    h1 a {
+        font-size: 35px;
+    }
+}
+
+.card-body {
+    width: 310px;
+    margin: 0 auto;
+}
+@media (max-width: 500px) {
+    .card-body {
+        width: 80%;
+    }
+}
+
+.form-group {
+    padding-top: 24px;
+}
+@media (max-width: 500px) {
+    .form-group {
+        padding-top: 15px;
+    }
+}
+
+.form-group.tp {
+    padding: 0;
+}
+
+.form-group label {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 15px;
+    color: #fce4e7;
+}
+@media (max-width: 500px) {
+    .form-group label {
+        font-size: 18px;
+    }
+}
+
+.form-group .col-md-6 {
+    margin-top: 10px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    border: 0;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+@media (max-width: 500px) {
+    input {
+        width: 100%;
+    }
+}
+
+.submit-btn {
+    width: 70%;
+    margin: 0 auto;
+}
+@media (max-width: 500px) {
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+.submit-btn button {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    font-family: "Hiragino Maru Gothic ProN";
+    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.69);
+    background: #359fad;
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.16) inset);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16) inset;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
+@media (max-width: 500px) {
+    .submit-btn button {
+        margin-top: 20px;
+    }
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.card-footer {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-footer hr {
+    height: 1px;
+    margin: 38.5px 0;
+    background-color: #fce4e7;
+}
+
+.card-footer p {
+    font-family: "HarenosoraMincho";
+    font-size: 18px;
+}
+
+
+.card-footer a {
+    display: block;
+    width: 197px;
+    height: 40px;
+    border-radius: 12px;
+    margin: 19px auto 0;
+    letter-spacing: 0.1em;
+    font-family: "ヒラギノ丸ゴ ProN";
+    font-size: 17px;
+    color: #fff;
+    background: #35ad63;
+    line-height: 40px;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.69);
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+    transition: all 0.5s;
+}
+@media (max-width: 500px) {
+    .card-footer a {
+        width:  100%;
+    }
+}
+@media (max-width: 450px) {
+    .card-footer a {
+        width:  80%;
+    }
+}
+
+.card-footer a:hover {
+    opacity: 0.7;
+}
+
+.invalid-feedback {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    color: #fff;
+    background-color: #C51134;
+    border-radius: 5px;
+}
+
+/* --------------------------------------------------------------------
+                                register
+-------------------------------------------------------------------- */
+#register {
+    z-index: 10;
+}
+
+#register::after {
+    content: url("../img/auth-bg.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+@media (max-width: 835px) {
+    #register::after {
+        content: none;
+    }
+}
+
+#register .card {
+    position: static;
+    z-index: 10;
+}
+
+/* --------------------------------------------------------------------
+                                login
+-------------------------------------------------------------------- */
+#login.container {
+    height: 100%;
+}
+#login .card {
+    position: relative;
+    z-index: 10;
+}
+
+#login .card::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 717px;
+    height: 515px;
+    border: 1px solid #fce4e7;
+    z-index: -1;
+}
+@media (max-width: 750px) {
+    #login .card::after {
+        content: none;
+    }
+}
+#login .submit-btn {
+    padding-top: 0;
+    margin-top: 40px;
+}
+
+#login .submit-btn button {
+    background: #35ad63;
+}
+
+#login .card-footer a {
+    background: #359fad;
+}
+
+#login .login-img {
+    width: 196px;
+    margin: 60px auto 0;
+}
