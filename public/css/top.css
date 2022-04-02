@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+/* ローディング */
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: linear-gradient(#355469 0%, #00151d 100%);
+    text-align: center;
+}
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#splash_logo svg {
+    width: 635px;
+}
+#mask .st0 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 90;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+}
+
+/* レイアウト */
+@font-face {
+    font-family: "せのびゴシック";
+    src: url("../fonts/Senobi-Gothic-Bold.ttf");
+}
+@font-face {
+    font-family: "せのびレギュラー";
+    src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
+}
+@font-face {
+    font-family: "HarenosoraMincho";
+    src: url("../fonts/Harenosora.otf");
+}
+body {
+    font-family: "HarenosoraMincho";
+}
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: left !important;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* ------------ main ------------ */
+/* --------------------------------
+          .main-top
+-------------------------------- */
+.main-top {
+    position: relative;
+    display: flex;
+}
+.main-top::after {
+    content: url(../img/top_man.png);
+    position: absolute;
+    top: 492px;
+    left: 23px;
+}
+/* top-left */
+.top-left {
+    position: relative;
+    width: 78%;
+    height: 79vh;
+    background-color: #355469;
+}
+.top-left nav {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+@media (max-width: 1500px) {
+    .top-left nav {
+        margin-left: 3%;
+    }
+}
+.item {
+    max-width: 1055px;
+    height: 105px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    list-style: none;
+}
+.item li a {
+    font-size: 17px;
+    color: #fce4e7;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+.item li:nth-child(2) a {
+    margin-left: 57px;
+}
+.item li:nth-child(3) a {
+    margin-left: 59px;
+}
+.item li:nth-child(4) a {
+    margin-left: 60px;
+}
+.item li a:hover {
+    opacity: 0.5;
+}
+.top-left::after {
+    content: "";
+    position: absolute;
+    top: 252px;
+    width: 555px;
+    height: 1px;
+    display: block;
+    border-bottom: 1px solid #fce4e7;
+}
+.top-left-text {
+    max-width: 900px;
+    margin: 210px auto;
+    color: #fff;
+}
+@media (max-width: 1500px) {
+    .top-left-text {
+        padding-left: 3%;
+    }
+}
+.title {
+    margin-bottom: 51px;
+    font-size: 25px;
+    text-shadow: 5px 4px 3px rgba(0, 0, 0);
+}
+h1 {
+    font-family: "せのびレギュラー";
+    margin-bottom: 25px;
+    margin-left: -11px;
+    font-size: 55px;
+    font-weight: normal;
+    text-shadow: 5px 4px 3px rgba(0, 0, 0);
+}
+h1 + p {
+    font-family: "せのびレギュラー";
+    font-size: 21px;
+    text-shadow: 4px 3px 2px rgba(0, 0, 0);
+}
+/* top-right */
+.top-right {
+    width: 28%;
+    height: 79vh;
+    background: linear-gradient(#baa68b 0%, #5d5346 100%);
+}
+.top-right-text {
+    width: 264px;
+    margin: 366px auto 50px;
+    font-size: 26px;
+    color: #fff;
+    line-height: 1.55;
+}
+.top-right-text p {
+    padding-left: 48px;
+    text-shadow: 4px 3px 2px rgba(0, 0, 0);
+}
+.top-right-btn ul {
+    text-align: center;
+}
+.top-right-btn ul > li {
+    margin-bottom: 20px;
+}
+.top-right-btn a {
+    display: inline-block;
+    transition: all 0.5s;
+}
+.top-right-btn a:hover {
+    opacity: 0.6;
+}
+
+/* --------------------------------
+          main-bottom
+-------------------------------- */
+/* ----- bottom-header ----- */
+#bottom-header {
+    width: 100%;
+    height: 45vh;
+    position: relative;
+}
+@media screen and (max-width: 768px) {
+    #bottom-header {
+        height: 90vh;
+    }
+}
+/* scrolldown */
+.scrolldown {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: 50px;
+}
+.scrolldown span {
+    position: absolute;
+    left: -26px;
+    top: 6px;
+    color: #eee;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+}
+.scrolldown::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 1px;
+    height: 30px;
+    background: #eee;
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 30px;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+/* ----- video-ara ----- */
+#video-area {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+#video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* ----- bottom-container ----- */
+#bottom-container {
+    width: 100%;
+    height: 1753px;
+    display: block !important;
+    justify-content: center;
+    align-items: center;
+    text-align: left !important;
+    background: linear-gradient(#355469 0%, #1b2a35 100%);
+    overflow: hidden;
+}
+/* bottom-tp */
+.bottom-tp {
+    max-width: 1197px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 303px;
+    padding-left: 63px;
+    margin: 0 auto;
+}
+.bottom-tp-left {
+    margin-top: 60px;
+    font-size: 24px;
+    color: #fff;
+}
+.bottom-tp-left > p {
+    line-height: 1.7;
+}
+.bottom-tp-left > p + p {
+    margin-top: 48px;
+}
+.bottom-tp-right {
+    position: static;
+    width: 580px;
+    z-index: 10;
+}
+.bottom-tp-right img {
+    width: 100%;
+}
+/* bottom-bt */
+.bottom-bt {
+    position: relative;
+    margin-top: 462px;
+}
+.bottom-bt::before {
+    position: absolute;
+    content: "";
+    top: -573px;
+    right: -220px;
+    width: 800px;
+    height: 800px;
+    border: 1px solid #fce4e7;
+    border-radius: 50%;
+}
+.bottom-bt::after {
+    position: absolute;
+    content: "";
+    top: -353px;
+    left: -247px;
+    width: 800px;
+    height: 800px;
+    border: 1px solid #fce4e7;
+    border-radius: 50%;
+}
+.bottom-bt-contents {
+    display: inline-block;
+    position: relative;
+    top: 91px;
+    left: 50%;
+    transform: translateX(-52%);
+}
+.bottom-bt-contents::after {
+    position: absolute;
+    content: "";
+    bottom: -827px;
+    right: -473px;
+    width: 800px;
+    height: 800px;
+    border: 1px solid #fce4e7;
+    border-radius: 50%;
+}
+.bt-contents-search {
+    position: absolute;
+    top: -97px;
+    left: -225px;
+}
+.bt-contents-memory {
+    position: absolute;
+    top: -35px;
+    right: -254px;
+}
+.bt-contents-memo {
+    position: absolute;
+    bottom: -126px;
+    right: 53px;
+    z-index: 10;
+}
+.bt-contents-search p,
+.bt-contents-memory p,
+.bt-contents-memo p {
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 4px 3px 2px rgba(0, 0, 0);
+}
+.bt-contents-search p a,
+.bt-contents-memory p a,
+.bt-contents-memo p a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+    transition: all 0.5s;
+}
+.bt-contents-search p a:hover,
+.bt-contents-memory p a:hover,
+.bt-contents-memo p a:hover {
+    opacity: 0.6;
+}
+
+/* ----- footer ----- */
+.footer {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+        #00577c 0%,
+        #004562 0%,
+        #003f59 0%,
+        #002c3e 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer h3 {
+    color: white;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px black;
+    font-family: "せのびレギュラー";
+}
+.footer p {
+    color: white;
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 15px;
+    font-weight: bold;
+}
