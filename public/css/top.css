@@ -10,6 +10,7 @@
     text-align: center;
 }
 #splash_logo {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,13 +60,174 @@ body {
 }
 
 /* ------------ main ------------ */
+
+/* ナビバー */
+.navbar .container {
+    max-width: 1320px;
+}
+.navbar-expand-md {
+    height: 130px;
+    background-color: inherit !important;
+}
+.shadow-sm {
+    box-shadow: none !important;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #FCE4E7;
+    transition: all 0.5s;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #FCE4E7;
+    opacity: 0.7;
+}
+
+.navbar-light .navbar-nav.auth .nav-link {
+    color: #FCE4E7;
+    /* color: #002c3e; */
+}
+
+.navbar-light .navbar-nav.auth .nav-link.dropdown-toggle {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: "せのびレギュラー";
+    font-size: 30px;
+    text-shadow: 3px 3px 3px black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 20px;
+}
+
+.navbar-expand-md .navbar-nav .nav-item:first-child {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.navbar-light .navbar-nav.auth .nav-link {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 18px;
+}
+
+.navbar-expand-md .navbar-nav.auth .nav-item:first-child {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    padding: 0;
+    min-width: 8rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+@media(max-width: 767px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar-light .navbar-brand {
+        margin-left: 3%;
+    }
+
+    .navbar-light .navbar-toggler {
+        margin-right: 3%;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        background-color: rgba(255, 255, 255);
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item:first-child {
+        margin: 0;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item {
+        border-bottom: 1px dashed #000;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
+        margin: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+        padding: 1.5em;
+        text-align: center;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-link {
+        color: #000;
+    }
+}
+
+.responsive {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .dropdown {
+        display: none;
+    }
+
+    .dropdown.responsive {
+        display: block;
+    }
+
+    .dropdown-toggle::after {
+        content: none;
+    }
+
+    .dropdown-item {
+        padding: 1em;
+        background-color: #FCE4E7;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle .fas {
+        margin-right: 8px;
+    }
+}
+
 /* --------------------------------
           .main-top
 -------------------------------- */
-.main-top {
-    position: relative;
-    display: flex;
+.main-top-bg {
+    width: 100%;
+    background: linear-gradient(90deg, #355469 78%, #baa68b 0%, #baa68b 100%);
+    /* background: linear-gradient(#baa68b 0%, #5d5346 100%); */
+
 }
+.main-top-container {
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .main-top::after {
     content: url(../img/top_man.png);
     position: absolute;
@@ -73,13 +235,13 @@ body {
     left: 23px;
 }
 /* top-left */
-.top-left {
+/* .top-left {
     position: relative;
     width: 78%;
     height: 79vh;
     background-color: #355469;
-}
-.top-left nav {
+} */
+/* .top-left nav {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -120,6 +282,7 @@ body {
 .item li a:hover {
     opacity: 0.5;
 }
+*/
 .top-left::after {
     content: "";
     position: absolute;
@@ -158,11 +321,11 @@ h1 + p {
     text-shadow: 4px 3px 2px rgba(0, 0, 0);
 }
 /* top-right */
-.top-right {
+/* .top-right {
     width: 28%;
     height: 79vh;
     background: linear-gradient(#baa68b 0%, #5d5346 100%);
-}
+} */
 .top-right-text {
     width: 264px;
     margin: 366px auto 50px;

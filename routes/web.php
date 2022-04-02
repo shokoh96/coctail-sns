@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('tops/top');
 });
+
+Route::get('/search', function () {
+    return view('tops/search');
+});
