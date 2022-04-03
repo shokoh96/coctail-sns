@@ -20,7 +20,7 @@
     max-width: 1320px;
 }
 .navbar-expand-md {
-    height: 130px;
+    height: 100px;
     border-bottom: 1px solid #FCE4E7;
     background-color: inherit !important;
 }
@@ -45,12 +45,12 @@
 }
 .navbar-brand {
     font-family: "せのびレギュラー";
-    font-size: 30px;
+    font-size: 25px;
     text-shadow: 3px 3px 3px black;
 }
 .navbar-light .navbar-nav .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
-    font-size: 20px;
+    font-size: 17px;
 }
 .navbar-expand-md .navbar-nav .nav-item:first-child {
     margin-left: 30px;
@@ -58,7 +58,7 @@
 }
 .navbar-light .navbar-nav.auth .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
-    font-size: 18px;
+    font-size: 17px;
 }
 .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
     margin-left: 0;
