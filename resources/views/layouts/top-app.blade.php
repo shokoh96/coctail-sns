@@ -28,7 +28,7 @@
     <div id="splash">
         <div id="splash_logo">
             <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" width="635.14" height="267.28" viewBox="0 0 635.14 267.28"
+                x="0px" y="0px" height="267.28" viewBox="0 0 635.14 267.28"
                 style="enable-background:new 0 0 635.14 267.28;" xml:space="preserve">
                 <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/text.svg" width="635.14"
                     height="267.28" mask="url(#clipmask)"></image>

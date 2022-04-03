@@ -51,7 +51,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                                         onclick="event.preventDefault();
-                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                    document.getElementById('logout-form').submit();">
                                                         {{ __('ログアウト') }}
                                                     </a>
 
@@ -69,8 +69,7 @@
 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                                        onclick="event.preventDefault();
-                                                                                                    document.getElementById('logout-form').submit();">
+                                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                         {{ __('ログアウト') }}
                                                     </a>
 
@@ -104,12 +103,10 @@
                                 <div class="top-right-btn">
                                     <ul>
                                         <li>
-                                            <a class="cocktail-serach" href="search"><img src="img/top_button1.jpg"
-                                                    alt="お酒を探す"></a>
+                                            <a class="cocktail-serach" href="search">お酒を探す</a>
                                         </li>
                                         <li>
-                                            <a class="cocktail-memo" href="#"><img src="img/top_button2.jpg"
-                                                    alt="お酒を探す"></a>
+                                            <a class="cocktail-memo" href="#">お酒を記録する</a>
                                         </li>
                                     </ul>
                                 </div><!-- /.top-right-btn -->
