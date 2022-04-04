@@ -464,6 +464,11 @@ h1 + p {
     font-size: 18px;
     letter-spacing: 0.05em;
 }
+@media (max-width: 599px) {
+    .scrolldown span {
+        top: -30px;
+    }
+}
 .scrolldown::after {
     content: "";
     position: absolute;
@@ -489,6 +494,26 @@ h1 + p {
         height: 0;
         top: 50px;
         opacity: 0;
+    }
+}
+@media (max-width: 599px) {
+    @keyframes pathmove {
+        0% {
+            height: 0;
+            top: -10px;
+            opacity: 0;
+        }
+
+        30% {
+            height: 30px;
+            opacity: 1;
+        }
+
+        100% {
+            height: 0;
+            top: 20px;
+            opacity: 0;
+        }
     }
 }
 
@@ -523,6 +548,16 @@ h1 + p {
     background: linear-gradient(#355469 0%, #1b2a35 100%);
     overflow: hidden;
 }
+@media (max-width: 860px) {
+    #bottom-container {
+        height: 1555px;
+    }
+}
+@media (max-width: 599px) {
+    #bottom-container {
+        height: 1550px;
+    }
+}
 /* bottom-tp */
 .bottom-tp {
     max-width: 1197px;
@@ -532,10 +567,38 @@ h1 + p {
     padding-left: 110px;
     margin: 0 auto;
 }
+@media (max-width: 1030px) {
+    .bottom-tp {
+        max-width: 800px;
+        padding-left: 0;
+    }
+}
+@media (max-width: 860px) {
+    .bottom-tp {
+        max-width: 400px;
+        padding-top: 120px;
+        flex-direction: column;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-tp {
+        max-width: 300px;
+    }
+}
 .bottom-tp-left {
     margin-top: 52px;
     font-size: 23px;
     color: #fff;
+}
+@media (max-width: 860px) {
+    .bottom-tp-left {
+        order: 2;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-tp-left {
+        font-size: 20px;
+    }
 }
 .bottom-tp-left > p {
     line-height: 1.7;
@@ -548,13 +611,40 @@ h1 + p {
     width: 580px;
     z-index: 10;
 }
+@media (max-width: 1030px)
+{
+    .bottom-tp-right {
+        width: 400px;
+    }
+}
+@media (max-width: 1030px)
+{
+    .bottom-tp-right {
+        order: 1;
+    }
+}
 .bottom-tp-right img {
     width: 515px;
+}
+@media (max-width: 1030px) {
+    .bottom-tp-right img {
+        width: 400px;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-tp-right img {
+        width: 300px;
+    }
 }
 /* bottom-bt */
 .bottom-bt {
     position: relative;
     margin-top: 400px;
+}
+@media (max-width: 860px) {
+    .bottom-bt {
+        margin-top: 500px;
+    }
 }
 .bottom-bt::before {
     position: absolute;
@@ -566,15 +656,97 @@ h1 + p {
     border: 1px solid #fce4e7;
     border-radius: 50%;
 }
+@media (max-width: 1250px) {
+    .bottom-bt::before {
+        width: 680px;
+        height: 680px;
+        right: -260px;
+    }
+}
+@media (max-width: 1050px) {
+    .bottom-bt::before {
+        width: 630px;
+        height: 630px;
+        top: -460px;
+        right: -315px;
+    }
+}
+@media (max-width: 950px) {
+    .bottom-bt::before {
+        width: 500px;
+        height: 500px;
+        top: -330px;
+        right: -265px;
+    }
+}
+@media (max-width: 950px) {
+    .bottom-bt::before {
+        width: 400px;
+        height: 400px;
+        top: -250px;
+        right: -180px;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-bt::before {
+        width: 260px;
+        height: 260px;
+        top: -180px;
+        right: -135px;
+    }
+}
 .bottom-bt::after {
     position: absolute;
     content: "";
     top: -300px;
-    left: -225px;
+    left: -267px;
     width: 720px;
     height: 720px;
     border: 1px solid #fce4e7;
     border-radius: 50%;
+}
+@media (max-width: 1250px) {
+    .bottom-bt::after {
+        width: 680px;
+        height:  680px;
+    }
+}
+@media (max-width: 1050px) {
+    .bottom-bt::after {
+        width: 630px;
+        height:  630px;
+    }
+}
+@media (max-width: 950px) {
+    .bottom-bt::after {
+        width: 500px;
+        height:  500px;
+        top: -170px;
+        left: -230px;
+    }
+}
+@media (max-width: 860px) {
+    .bottom-bt::after {
+        width: 400px;
+        height:  400px;
+        top: -120px;
+        left: -160px;
+    }
+}
+@media (max-width: 710px) {
+    .bottom-bt::after {
+        width: 400px;
+        height:  400px;
+        top: -160px;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-bt::after {
+        width: 260px;
+        height:  260px;
+        top: -400px;
+        left: -110px;
+    }
 }
 .bottom-bt-contents {
     display: inline-block;
@@ -582,6 +754,18 @@ h1 + p {
     top: 91px;
     left: 50%;
     transform: translateX(-52%);
+    z-index: 10;
+}
+@media (max-width: 860px) {
+    .bottom-bt-contents {
+        transform: translateX(-35%);
+    }
+}
+@media (max-width: 860px) {
+    .bottom-bt-contents img {
+        width: 80%;
+        text-align: center;
+    }
 }
 .bottom-bt-contents::after {
     position: absolute;
@@ -593,21 +777,103 @@ h1 + p {
     border: 1px solid #fce4e7;
     border-radius: 50%;
 }
+@media (max-width: 1250px) {
+    .bottom-bt-contents::after {
+        width: 680px;
+        height: 680px;
+        right:  -350px;
+    }
+}
+@media (max-width: 1050px) {
+    .bottom-bt-contents::after {
+        width: 630px;
+        height: 630px;
+        right:  -335px;
+        bottom: -680px;
+    }
+}
+@media (max-width: 950px) {
+    .bottom-bt-contents::after {
+        width: 500px;
+        height: 500px;
+        right:  -275px;
+        bottom: -520px;
+    }
+}
+@media (max-width: 860px) {
+    .bottom-bt-contents::after {
+        width: 400px;
+        height: 400px;
+        right:  -110px;
+        bottom: -450px;
+    }
+}
+@media (max-width: 599px) {
+    .bottom-bt-contents::after {
+        width: 260px;
+        height: 260px;
+        right:  45px;
+        bottom: -280px;
+    }
+}
 .bt-contents-search {
     position: absolute;
     top: -85px;
     left: -185px;
+}
+@media (max-width: 860px) {
+    .bt-contents-search {
+        left: -210px;
+    }
+}
+@media (max-width: 710px) {
+    .bt-contents-search {
+        left: -155px;
+    }
+}
+@media (max-width: 599px) {
+    .bt-contents-search {
+        top: -350px;
+        left: -40px;
+    }
 }
 .bt-contents-memory {
     position: absolute;
     top: -28px;
     right: -230px;
 }
+@media (max-width: 860px) {
+    .bt-contents-memory {
+        right: -130px;
+    }
+}
+@media (max-width: 760px) {
+    .bt-contents-memory {
+        right: -80px;
+    }
+}
+@media (max-width: 599px) {
+    .bt-contents-memory {
+        top: -140px;
+        right: 60px;
+    }
+}
 .bt-contents-memo {
     position: absolute;
     bottom: -130px;
     right: 50px;
     z-index: 10;
+}
+@media (max-width: 860px) {
+    .bt-contents-memo {
+        right: 135px;
+    }
+}
+@media (max-width: 599px) {
+    .bt-contents-memo {
+        bottom: -110px;
+        right: 115px;
+    }
 }
 .bt-contents-search p,
 .bt-contents-memory p,
@@ -616,6 +882,20 @@ h1 + p {
     font-size: 24px;
     text-shadow: 4px 3px 2px rgba(0, 0, 0);
 }
+@media (max-width: 860px) {
+    .bt-contents-search p,
+    .bt-contents-memory p,
+    .bt-contents-memo p {
+        font-size: 19px;
+    }
+}
+@media (max-width: 599px) {
+    .bt-contents-search p,
+    .bt-contents-memory p,
+    .bt-contents-memo p {
+        font-size: 17px;
+    }
+}
 .bt-contents-search p a,
 .bt-contents-memory p a,
 .bt-contents-memo p a {
@@ -623,6 +903,13 @@ h1 + p {
     text-decoration: none;
     font-size: 23px;
     transition: all 0.5s;
+}
+@media (max-width: 860px) {
+    .bt-contents-search p a,
+    .bt-contents-memory p a,
+    .bt-contents-memo p a {
+        font-size: 19px;
+    }
 }
 .bt-contents-search p a:hover,
 .bt-contents-memory p a:hover,
@@ -636,12 +923,8 @@ h1 + p {
     z-index: 10;
     width: 100%;
     height: 100px;
-    background: linear-gradient(
-        #00577c 0%,
-        #004562 0%,
-        #003f59 0%,
-        #002c3e 100%
-    );
+    padding: 0 5%;
+    background: linear-gradient(#00577c 0%,#004562 0%,#003f59 0%,#002c3e 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -660,4 +943,9 @@ h1 + p {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 15px;
     font-weight: bold;
+}
+@media (max-width: 599px) {
+    .footer p {
+        font-size: 10px;
+    }
 }

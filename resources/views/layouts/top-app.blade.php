@@ -47,7 +47,7 @@
 
     <footer class="footer">
         <h3>ここ酒</h3>
-        <p>copyright &copy; 2022 the 5th class All Rights Reserved</p>
+        <p>copyright &copy; 2022 the sho koh All Rights Reserved</p>
     </footer>
     <!--==============JQuery読み込み===============-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
