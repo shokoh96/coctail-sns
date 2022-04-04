@@ -151,6 +151,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 5%;
 }
 
 .footer h3 {
@@ -167,4 +168,9 @@ main {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 15px;
     font-weight: bold;
+}
+@media (max-width: 599px) {
+    .footer p {
+        font-size: 10px;
+    }
 }
