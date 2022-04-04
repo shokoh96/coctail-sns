@@ -4,16 +4,16 @@
     <div class="container" id="search-form">
         <div class="search-form-container">
             <form method="get" action="{{ route('searches.index') }}">
-                <div class="form-group row d-block col-md-4 col-sm-5 text-center mx-auto mb-4">
+                <div class="form-group row d-block col-md-4 col-sm-8 col-12 text-center mx-auto mb-4">
                     <label for="name" class="col-form-label">{{ __('フリーワード') }}</label>
                     <div>
                         <input class="form-control" type="text" id="word" name="word" placeholder="マティーニ ライム シンプル etc…">
                     </div>
                 </div>
 
-                <div class="form-group row col-sm-9 mx-auto text-center">
+                <div class="form-group row col-sm-8 col-12 mx-auto text-center">
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 col-6 base">
                         <label for="base_id" class="col-form-label">お酒のベース</label>
                         <select name="base_id" id="base_id" class="form-control"
                             {{ Form::select('base_id', [
@@ -29,10 +29,10 @@
                                 9 => 'ビール',
                                 10 => '日本酒',
                                 0 => 'ノンアルコール',
-                            ]) }}>
-                        </select>
+                            ]) }}
+                            </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 col-6 taste">
                         <label for="taste_id" class="col-form-label">甘口-辛口</label>
                         <select name="taste_id" id="taste_id" class="form-control"
                             {{ Form::select('taste_id', [
@@ -42,10 +42,10 @@
                                 3 => '中口',
                                 4 => '中辛口',
                                 5 => '辛口',
-                            ]) }}>
-                        </select>
+                            ]) }}
+                            </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 col-6 frequency">
                         <label for="alcohol" class="col-form-label">度数</label>
                         <select name="alcohol" id="alcohol" class="form-control"
                             {{ Form::select('alcohol', [
@@ -56,14 +56,14 @@
                                 '21 30' => '21~30(やや強い)',
                                 '31 40' => '31~40(強い)',
                                 '41 100' => '41~ (とても強い)',
-                            ]) }}>
-                        </select>
+                            ]) }}
+                            </select>
                     </div>
 
                 </div>
 
-                <div class="form-group row tp">
-                    <div class="col-lg-2 col-sm-3  mx-auto mt-4">
+                <div class="form-group row">
+                    <div class="col-lg-2 col-sm-3 col-8 mx-auto mt-5">
                         <button class="form-control" type="submit">お酒を探す</button>
                     </div>
                 </div>
