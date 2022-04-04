@@ -27,7 +27,7 @@
 
 <body>
     <div id="app">
-        <div class="container-bg">
+        <div class="container-bg" id="page-top">
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
@@ -73,7 +73,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -92,7 +92,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -108,7 +108,7 @@
                 </div>
             </nav>
 
-            <main class="py-4">
+            <main>
                 @yield('content')
             </main>
         </div>
