@@ -1,14 +1,26 @@
 @charset "utf-8";
 
+/* --------------------------------
+          .共通パーツ
+-------------------------------- */
 /* レイアウト */
 @font-face {
     font-family: "03SmartFontUI";
     src: url("../fonts/03SmartFontUI.ttf");
 }
-
 @font-face {
     font-family: "せのびレギュラー";
     src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
+}
+@font-face {
+    font-family: "せのびゴシック";
+    src: url("../fonts/Senobi-Gothic-Bold.ttf");
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1117px;
 }
 .container-bg {
     position: relative;
@@ -133,9 +145,7 @@
 }
 
 /* ----- main ----- */
-main {
-    height: 500px;
-}
+
 
 /* ----- footer ----- */
 .footer {
@@ -143,10 +153,7 @@ main {
     z-index: 10;
     width: 100%;
     height: 100px;
-    background: linear-gradient(#00577c 0%,
-            #004562 0%,
-            #003f59 0%,
-            #002c3e 100%);
+    background: linear-gradient(#00577c 0%,#004562 0%,#003f59 0%,#002c3e 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,4 +180,178 @@ main {
     .footer p {
         font-size: 10px;
     }
+}
+
+/* --------------------------------
+        #search_index
+-------------------------------- */
+#search-index {
+    padding-top: 98px;
+    padding-bottom: 60px;
+}
+.search-form {
+    position: relative;
+    height: 405px;
+    background-image: url('../img/search-formbg.png');
+    background-repeat: no-repeat;
+    border-radius: 49px;
+}
+.search-form::before {
+    content: url('../img/form-left.png');
+    position: absolute;
+    top: -35px;
+    left: -65px;
+}
+.search-form::after {
+    content: url('../img/form-right.png');
+    position: absolute;
+    right: -57px;
+    bottom: -75px;
+}
+.search-form form {
+    padding-top: 50px;
+}
+.search-form .form-group {
+    margin-bottom: 0;
+}
+.search-form .form-group label {
+    font-family: "せのびレギュラー";
+    font-size: 20px;
+    color: #fff;
+}
+.search-form .form-control {
+    font-family: "Hiragino Kaku Gothic ProN";
+    border-radius: 0;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+}
+.search-form button {
+    border: none;
+    font-family: "ヒラギノ丸ゴ ProN";
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(#baa68b 0%, #5d5346 100%);
+    text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.69);
+    transition: all 0.5s;
+}
+.search-form button:hover {
+    color: #fff;
+    opacity: 0.7;
+}
+
+/* --------- search-result --------- */
+.search-result {
+    margin-top: 110px;
+}
+.cards .row {
+    max-width: 1100px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.cards .row>* {
+    padding-right: calc(var(--bs-gutter-x) * 0.9);
+    padding-left: calc(var(--bs-gutter-x) * 0.6);
+}
+.cards .row a {
+    color: #fff;
+    text-decoration: none;
+}
+.cards .row a:nth-child(n + 4) {
+    margin-top: 75px;
+}
+.card {
+    position: relative;
+    height: 410px;
+    border: none !important;
+    border-radius: 49px !important;
+    background-color: rgb(0, 87, 124);
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+}
+.card:hover {
+    transform: scale(1.02);
+    transition-duration: 0.5s;
+}
+.japanese {
+    font-size: 27px;
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: -0.1rem;
+    color: #fff;
+    font-family: "せのびゴシック";
+}
+.english {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: "せのびゴシック";
+}
+.card-body {
+    position: relative;
+    height: 115px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.69);
+    border-radius: 0px 0px 38px 38px;
+}
+.card-body .summarize {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.card-body .items {
+    display: flex;
+    flex-wrap: wrap;
+    color: #000;
+    margin-bottom: 10px;
+}
+.card-body .items .col-6 {
+    margin: 5px 0;
+}
+.card-body .items span {
+    display: inline-block;
+    width: 40px;
+    font-family: "ヒラギノ丸ゴ ProN";
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #81725e;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.card-body .explanation {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    color: #000;
+    font-size: 14px;
+    z-index: 10;
+}
+.card-body img {
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+}
+
+/* --------- search-result --------- */
+.page-top-btn {
+    padding-top: 117px;
+}
+.page-top-btn a {
+    display: block;
+    color: #fce4e7;
+    text-align: center;
+    margin-top: 2px;
+    border: 3px solid #fce4e7;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+.page-top-btn .fas {
+    font-size: 29px;
 }
