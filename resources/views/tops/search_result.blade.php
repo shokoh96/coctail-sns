@@ -10,7 +10,7 @@
                 <div class="row">
                     @if (!empty($posts))
                         @foreach ($posts as $post)
-                            <a href="#" class="col-lg-4 col-sm-6">
+                            <a href="{{ route('searches.show', $post['cocktail_id']) }}" class="col-lg-4 col-sm-6">
                                 <div class="card">
                                     <h2 class="japanese">{{ $post['cocktail_name'] }}</h2>
                                     <p class="english">{{ $post['cocktail_name_english'] }}</p>
