@@ -4,7 +4,7 @@
     <div class="container" id="search-result">
         <div class="search-result-container">
             @if (!empty($posts))
-                <h1 class="mb-5">おすすめのお酒は...</h1>
+                <h1 class="mb-5">おすすめのカクテルは...</h1>
             @endif
             <div class="cards">
                 <div class="row">
