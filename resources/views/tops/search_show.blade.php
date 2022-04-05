@@ -16,7 +16,12 @@
                             <div class="tag-group">
                                 <div class="tag">
                                     <span>ベース</span>
-                                    <p>{{ $posts['base_name'] }}</p>
+                                    @if (!empty($post['base_name']))
+                                        <p>{{ $posts['base_name'] }}</p>
+                                    @else
+                                        <p>なし</p>
+                                    @endif
+
                                 </div>
                                 <div class="tag">
                                     <span>技法</span>
@@ -48,7 +53,7 @@
                             <hr>
                             <p class="cocktail_desc">{{ $posts['cocktail_desc'] }}</p>
                         </div>
-                        <div class="recipes-title col-6">作り方</div>
+                        <div class="recipes-title col-7">作り方</div>
                         <div class="recipes col-5">
                             @foreach ($posts['recipes'] as $recipe)
                                 <div class="col-12 d-flex justify-content-between">

@@ -676,7 +676,7 @@ html {
 }
 .box-contents .recipes-title {
     position: relative;
-    padding-left: 45px;
+    padding-left: 60px;
     border-bottom: dashed 2px #355469;
     margin: 0 auto 55px;
     font-size: 24px;
@@ -685,7 +685,7 @@ html {
 .box-contents .recipes-title::before {
     position: absolute;
     content: url('../img/material.png');
-    left: -10px;
+    left: -5px;
     bottom: -15px;
 }
 .box-contents .recipes {
@@ -708,6 +708,7 @@ html {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 15px;
     text-align: left;
+    line-height: 1.6rem;
 }
 .box-contents .explanation hr {
     margin: 55px 0 50px;
