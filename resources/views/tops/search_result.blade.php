@@ -19,7 +19,11 @@
                                         <div class="items">
                                             <div class="col-6">
                                                 <span>Base</span>
-                                                {{ $post['base_name'] }}
+                                                @if (!empty($post['base_name']))
+                                                    {{ $post['base_name'] }}
+                                                @else
+                                                    なし
+                                                @endif
                                             </div>
                                             <div class="col-6">
                                                 <span>Tec</span>
