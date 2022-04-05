@@ -10,68 +10,56 @@
             <div class="show-box">
                 <div class="box-inner">
                     <div class="box-contents">
-                        <p class="cocktail_digest">ジンの良さを気軽に楽しめる王道のカクテル</p>
-                        <h1>ジン・トニック</h1>
+                        <p class="cocktail_digest">{{ $posts['cocktail_digest'] }}</p>
+                        <h1>{{ $posts['cocktail_name'] }}</h1>
                         <div class="box-tags">
                             <div class="tag-group">
                                 <div class="tag">
                                     <span>ベース</span>
-                                    <p>ウイスキー</p>
+                                    <p>{{ $posts['base_name'] }}</p>
                                 </div>
                                 <div class="tag">
                                     <span>技法</span>
-                                    <p>ビルド</p>
+                                    <p>{{ $posts['technique_name'] }}</p>
                                 </div>
                             </div>
                             <div class="tag-group">
                                 <div class="tag">
                                     <span>味わい</span>
-                                    <p>辛口</p>
+                                    <p>{{ $posts['taste_name'] }}</p>
                                 </div>
                                 <div class="tag">
                                     <span>スタイル</span>
-                                    <p>ロング</p>
+                                    <p>{{ $posts['style_name'] }}</p>
                                 </div>
                             </div>
                             <div class="tag-group">
                                 <div class="tag">
                                     <span>度数</span>
-                                    <p>16%</p>
+                                    <p>{{ $posts['alcohol'] }}%</p>
                                 </div>
                                 <div class="tag">
                                     <span>Top</span>
-                                    <p>オール</p>
+                                    <p>{{ $posts['top_name'] }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="explanation col-7 cocktail-explanation">
                             <hr>
-                            <p class="cocktail_desc">
-                                ジンとトニックウォーターをビルドするシンプルなレシピ。家でも簡単に作れる上、さっぱりして飲みやすい。シンプルかつスタンダードなカクテルが故にバーテンダーの腕が出やすいとされる。なお、トニックウォーターだけでは甘すぎる場合は炭酸水を半分入れたジン・ソニックというカクテルもある。
-                            </p>
+                            <p class="cocktail_desc">{{ $posts['cocktail_desc'] }}</p>
                         </div>
                         <div class="recipes-title col-6">作り方</div>
                         <div class="recipes col-5">
-                            <div class="col-12 d-flex justify-content-between">
-                                <p>ジン</p>
-                                <p>45ml</p>
-                            </div>
-                            <hr>
-                            <div class="col-12 d-flex justify-content-between">
-                                <p>トニックウォーター</p>
-                                <p>FullUP</p>
-                            </div>
-                            <hr>
-                            <div class="col-12 d-flex justify-content-between">
-                                <p>ライム</p>
-                                <p>1/6個</p>
-                            </div>
-                            <hr>
+                            @foreach ($posts['recipes'] as $recipe)
+                                <div class="col-12 d-flex justify-content-between">
+                                    <p>{{ $recipe['ingredient_name'] }}</p>
+                                    <p>{{ $recipe['amount'] }}{{ $recipe['unit'] }}</p>
+                                </div>
+                                <hr>
+                            @endforeach
                         </div>
                         <div class="explanation col-7">
-                            <p class="recipe_desc">
-                                グラスに氷を入れてジンを注ぎ、その後冷えたトニック・ウォーターでグラスを満たし、炭酸が抜けないよう軽くステアする。最初にカットしたライムを飾り付ける。
-                            </p>
+                            <p class="recipe_desc">{{ $posts['cocktail_desc'] }}</p>
                         </div>
                     </div>
                 </div>
