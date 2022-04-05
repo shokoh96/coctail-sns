@@ -352,11 +352,11 @@ html {
     flex-wrap: wrap;
     margin: 0 auto;
 }
-@media (max-width: 680px) {
+/* @media (max-width: 680px) {
     .cards .row {
         flex-direction: column;
     }
-}
+} */
 .cards .row>* {
     padding-right: calc(var(--bs-gutter-x) * 0.9);
     padding-left: calc(var(--bs-gutter-x) * 0.6);
@@ -374,7 +374,10 @@ html {
     .cards .row a {
         margin: 0 auto;
     }
+}
+@media (min-width: 576px) and (max-width: 680px) {
     .cards .row a.col-sm-6 {
+        flex: 0 0 100% !important;
         max-width: 100% !important;
     }
 }
@@ -460,7 +463,7 @@ html {
 }
 .card-body .items .col-6 {
     margin: 10px 0;
-    font-size: 15px;
+    font-size: 13px;
 }
 @media (max-width: 1100px) {
     .card-body .items .col-6 {
@@ -543,6 +546,16 @@ html {
     position: relative;
     height: 75vh;
 }
+@media (max-width: 1000px) {
+    .not-found {
+        height: 86vh;
+    }
+}
+@media (max-width: 576px) {
+    .not-found {
+        height: 79vh;
+    }
+}
 .not-found-container {
     position: absolute;
     top: 50%;
@@ -556,6 +569,31 @@ html {
     color: #fff;
     text-shadow: 5px 4px 3px #000;
 }
+@media (max-width: 905px) {
+    .not-found p {
+        font-size: 30px;
+    }
+}
+@media (max-width: 785px) {
+    .not-found p {
+        font-size: 25px;
+    }
+}
+@media (max-width: 675px) {
+    .not-found p {
+        font-size: 23px;
+    }
+}
+@media (max-width: 576px) {
+    .not-found p {
+        font-size: 19px;
+    }
+}
 .not-found img {
     width: 35%;
+}
+@media (max-width: 800px) {
+    .not-found img {
+        width: 50%;
+    }
 }
