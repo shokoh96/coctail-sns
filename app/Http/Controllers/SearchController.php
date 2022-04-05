@@ -33,6 +33,6 @@ class SearchController extends Controller
         $posts = json_decode($posts, true);
         $posts = $posts['cocktails'];
 
-        return view('tops.search-result', ['posts' => $posts]);
+        return view('tops.search_result', ['posts' => $posts]);
     }
 }

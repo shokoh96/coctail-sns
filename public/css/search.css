@@ -327,8 +327,22 @@ html {
 /* --------------------------------
         #search_result
 -------------------------------- */
-.search-result-container {
+@media (max-width: 680px) {
+    #search-result {
+        padding: 0 20px;
+    }
+}
+.search-result-container h1 {
     margin-top: 110px;
+    font-family: "せのびレギュラー";
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 5px 4px 3px #000;
+}
+@media (max-width: 680px) {
+    .search-result-container h1 {
+        margin-top: 60px;
+    }
 }
 .cards .row {
     max-width: 1100px;
@@ -338,16 +352,50 @@ html {
     flex-wrap: wrap;
     margin: 0 auto;
 }
+@media (max-width: 680px) {
+    .cards .row {
+        flex-direction: column;
+    }
+}
 .cards .row>* {
     padding-right: calc(var(--bs-gutter-x) * 0.9);
     padding-left: calc(var(--bs-gutter-x) * 0.6);
+}
+@media (max-width: 680px) {
+    .cards .row>* {
+        padding: 0;
+    }
 }
 .cards .row a {
     color: #fff;
     text-decoration: none;
 }
+@media (max-width: 680px) {
+    .cards .row a {
+        margin: 0 auto;
+    }
+    .cards .row a.col-sm-6 {
+        max-width: 100% !important;
+    }
+}
 .cards .row a:nth-child(n + 4) {
     margin-top: 75px;
+}
+@media (max-width: 991px) {
+    .cards .row a:nth-child(n + 4) {
+        margin-top: 0;
+    }
+    .cards .row a:nth-child(n + 3) {
+        margin-top: 75px;
+    }
+}
+@media (max-width: 680px) {
+    .cards .row a:nth-child(n + 3) {
+        margin-top: 0px;
+    }
+    .cards .row a:nth-child(n + 2) {
+        margin-top: 20px;
+    }
 }
 .card {
     position: relative;
@@ -356,6 +404,11 @@ html {
     border-radius: 49px !important;
     background: linear-gradient(#baa68b 0%, #5d5346 100%);
     box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+}
+@media (max-width: 680px) {
+    .card {
+        height: 370px;
+    }
 }
 .card:hover {
     transform: scale(1.02);
@@ -379,15 +432,25 @@ html {
     position: relative;
     height: 115px;
     width: 100%;
-    padding: 20px 10px;
+    padding: 30px 10px;
     background: rgba(255, 255, 255, 0.69);
     border-radius: 0px 0px 38px 38px;
+}
+@media (max-width: 680px) {
+    .card-body  {
+        padding-top: 15px;
+    }
 }
 .card-body .summarize {
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+@media (max-width: 680px) {
+    .card-body .summarize {
+        margin-bottom: 5px;
+    }
 }
 .card-body .items {
     display: flex;
@@ -396,17 +459,47 @@ html {
     margin-bottom: 10px;
 }
 .card-body .items .col-6 {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 15px;
+}
+@media (max-width: 1100px) {
+    .card-body .items .col-6 {
+        font-size: 12px;
+    }
+}
+@media (max-width: 991px) {
+    .card-body .items .col-6 {
+        font-size: 15px;
+    }
+}
+@media (max-width: 730px) {
+    .card-body .items .col-6 {
+        font-size: 12px;
+    }
+}
+@media (max-width: 680px) {
+    .card-body .items .col-6 {
+        font-size: 14px;
+    }
 }
 .card-body .items span {
     display: inline-block;
-    width: 40px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
     font-family: "ヒラギノ丸ゴ ProN";
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     color: #fff;
     background-color: #81725e;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+@media (max-width: 680px) {
+    .card-body .items span {
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+    }
 }
 .card-body .explanation {
     position: absolute;
@@ -443,4 +536,26 @@ html {
 }
 .page-top-btn .fas {
     font-size: 29px;
+}
+
+/* -- Not Found -- */
+.not-found {
+    position: relative;
+    height: 75vh;
+}
+.not-found-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+.not-found p {
+    font-family: "せのびレギュラー";
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 5px 4px 3px #000;
+}
+.not-found img {
+    width: 35%;
 }
