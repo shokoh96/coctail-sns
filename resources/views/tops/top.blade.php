@@ -23,7 +23,7 @@
                                             <a class="nav-link" href="search">{{ __('お酒検索') }}</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="search">{{ __('記録一覧') }}</a>
+                                            <a class="nav-link" href="#">{{ __('記録一覧') }}</a>
                                         </li>
                                     </ul>
 
@@ -51,7 +51,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                                         onclick="event.preventDefault();
-                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                                         {{ __('ログアウト') }}
                                                     </a>
 
@@ -146,7 +146,7 @@
                         <div class="bottom-bt-contents">
                             <img src="img/top_bt-image.png" alt="今日は何のむ?">
                             <div class="bt-contents-search">
-                                <p>お酒を探す？ <a href="#">▶︎ Click</a></p>
+                                <p>お酒を探す？ <a href="search">▶︎ Click</a></p>
                             </div>
                             <div class="bt-contents-memory">
                                 <p>あの日のお酒は… <a href="#">▶︎ Click</a></p>
