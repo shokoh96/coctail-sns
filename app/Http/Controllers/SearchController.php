@@ -23,7 +23,7 @@ class SearchController extends Controller
             $alcohol_to = '';
         }
 
-        $url = "https://cocktail-f.com/api/v1/cocktails?" . 'word=' . $word . '&' . 'base=' . $base . '&' . 'taste=' . $taste . '&' . 'alcohol_from=' . $alcohol_from . '&' . 'alcohol_to=' . $alcohol_to;
+        $url = "https://cocktail-f.com/api/v1/cocktails?" . 'word=' . $word . '&' . 'base=' . $base . '&' . 'taste=' . $taste . '&' . 'alcohol_from=' . $alcohol_from . '&' . 'alcohol_to=' . $alcohol_to . '&' . 'page=' . 1 . '&' . 'limit=' . 100;
         $method = "GET";
 
         $client = new Client();
