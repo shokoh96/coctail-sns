@@ -16,12 +16,11 @@
                             <div class="tag-group">
                                 <div class="tag">
                                     <span>ベース</span>
-                                    @if (!empty($post['base_name']))
+                                    @if (!empty($posts['base_name']))
                                         <p>{{ $posts['base_name'] }}</p>
                                     @else
                                         <p>なし</p>
                                     @endif
-
                                 </div>
                                 <div class="tag">
                                     <span>技法</span>
@@ -64,7 +63,7 @@
                             @endforeach
                         </div>
                         <div class="explanation col-7">
-                            <p class="recipe_desc">{{ $posts['cocktail_desc'] }}</p>
+                            <p class="recipe_desc">{{ $posts['recipe_desc'] }}</p>
                         </div>
                     </div>
                 </div>
