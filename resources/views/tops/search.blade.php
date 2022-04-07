@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'ここ酒 - 検索画面')
+
 @section('content')
     <div class="container" id="search-form">
         <div class="search-form-container">
