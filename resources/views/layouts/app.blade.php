@@ -46,7 +46,7 @@
                                 <a class="nav-link" href="/search">{{ __('お酒検索') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="search">{{ __('記録一覧') }}</a>
+                                <a class="nav-link" href="{{ route('articles.index') }}">{{ __('記録一覧') }}</a>
                             </li>
                         </ul>
 
@@ -73,7 +73,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                                            document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -92,7 +92,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                                            document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 

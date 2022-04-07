@@ -178,9 +178,6 @@ html {
     }
 }
 
-/* ----- main ----- */
-
-
 /* ----- footer ----- */
 .footer {
     position: absolute;
@@ -215,4 +212,35 @@ html {
     .footer p {
         font-size: 10px;
     }
+}
+.dropdown-toggle::after {
+    content: none;
+}
+
+/* --------------------------------
+            article-index
+-------------------------------- */
+#article-index {
+    padding-bottom: 50px;
+    max-width: 900px;
+}
+#article-index h1 {
+    margin-top: 50px;
+    font-family: "せのびレギュラー";
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 5px 4px 3px #000;
+}
+#article-index .cards {
+    margin: 0 auto;
+}
+#article-index .card {
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+}
+#article-index .card img {
+    width: 250px;
+    height: 300px;
+    border-radius: 0.25rem 0 0 0.25rem;
 }
