@@ -17,23 +17,8 @@
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="m-form-text @error('name') is-invalid @enderror"
                                         name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                                    <small class="caution">※英数字3~16文字（登録後の変更はできません）</small>
                                     @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>※{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('年齢') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="age" type="number" class="form-control @error('age') is-invalid @enderror"
-                                        name="age" value="{{ old('age') }}" required autocomplete="age">
-
-                                    @error('age')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>※{{ $message }}</strong>
                                         </span>
@@ -63,7 +48,7 @@
                                 <div class="col-md-6">
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="new-password" placeholder="6文字以上の半角英数">
+                                        required autocomplete="new-password" placeholder="8文字以上の半角英数">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -80,8 +65,16 @@
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation" required autocomplete="new-password"
-                                        placeholder="6文字以上の半角英数">
+                                        placeholder="8文字以上の半角英数">
                                 </div>
+                            </div>
+
+                            <div class="form-check">
+                                <input id="age" class="form-check-input  @error('age') is-invalid @enderror" type="checkbox"
+                                    name="age" value="{{ old('age') }}" required autocomplete="age">
+                                <label class="form-check-label" for="age">
+                                    あなたは20歳以上ですか？
+                                </label>
                             </div>
 
                             <div class="form-group row mb-0 submit-btn">
