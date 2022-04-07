@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/* --------------------------------
+          .共通パーツ
+-------------------------------- */
+/* レイアウト */
+@font-face {
+    font-family: "03SmartFontUI";
+    src: url("../fonts/03SmartFontUI.ttf");
+}
+
+@font-face {
+    font-family: "せのびレギュラー";
+    src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
+}
+
+@font-face {
+    font-family: "せのびゴシック";
+    src: url("../fonts/Senobi-Gothic-Bold.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1117px;
+}
+
+.container-bg {
+    position: relative;
+    background: linear-gradient(#355469 0%, #1b2a35 100%);
+}
+
+/* ナビバー */
+.navbar .container {
+    max-width: 1320px;
+}
+
+.navbar-expand-md {
+    height: 100px;
+    border-bottom: 1px solid #FCE4E7;
+    background-color: inherit !important;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #FCE4E7;
+    transition: all 0.5s;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #FCE4E7;
+    opacity: 0.7;
+}
+
+.navbar-light .navbar-nav.auth .nav-link {
+    color: #FCE4E7;
+}
+
+.navbar-light .navbar-nav.auth .nav-link.dropdown-toggle {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-family: "せのびレギュラー";
+    font-size: 25px;
+    text-shadow: 3px 3px 3px black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 17px;
+}
+
+.navbar-expand-md .navbar-nav .nav-item:first-child {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.navbar-light .navbar-nav.auth .nav-link {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 17px;
+}
+
+.navbar-expand-md .navbar-nav.auth .nav-item:first-child {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    padding: 0;
+    min-width: 8rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+@media(max-width: 767px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar-light .navbar-brand {
+        margin-left: 3%;
+    }
+
+    .navbar-light .navbar-toggler {
+        margin-right: 3%;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        background-color: rgba(255, 255, 255);
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item:first-child {
+        margin: 0;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item {
+        border-bottom: 1px dashed #000;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
+        margin: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+        padding: 1.5em;
+        text-align: center;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-link {
+        color: #000;
+    }
+}
+
+.responsive {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .dropdown {
+        display: none;
+    }
+
+    .dropdown.responsive {
+        display: block;
+    }
+
+    .dropdown-toggle::after {
+        content: none;
+    }
+
+    .dropdown-item {
+        padding: 1em;
+        background-color: #FCE4E7;
+    }
+
+    .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle .fas {
+        margin-right: 8px;
+    }
+}
+
+/* ----- main ----- */
+
+
+/* ----- footer ----- */
+.footer {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#00577c 0%, #004562 0%, #003f59 0%, #002c3e 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px black;
+    font-family: "せのびレギュラー";
+}
+
+.footer p {
+    color: white;
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 599px) {
+    .footer p {
+        font-size: 10px;
+    }
+}

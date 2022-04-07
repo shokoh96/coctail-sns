@@ -23,7 +23,8 @@
                                             <a class="nav-link" href="/search">{{ __('お酒検索') }}</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">{{ __('記録一覧') }}</a>
+                                            <a class="nav-link"
+                                                href="{{ route('articles.index') }}">{{ __('記録一覧') }}</a>
                                         </li>
                                     </ul>
 
@@ -51,7 +52,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                                         onclick="event.preventDefault();
-                                                                                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                                         {{ __('ログアウト') }}
                                                     </a>
 
@@ -106,7 +107,7 @@
                                             <a class="cocktail-serach" href="/search">お酒を探す</a>
                                         </li>
                                         <li>
-                                            <a class="cocktail-memo" href="#">お酒を記録する</a>
+                                            <a class="cocktail-memo" href="{{ route('articles.index') }}">お酒を記録する</a>
                                         </li>
                                     </ul>
                                 </div><!-- /.top-right-btn -->
@@ -149,10 +150,10 @@
                                 <p>お酒を探す？ <a href="search">▶︎ Click</a></p>
                             </div>
                             <div class="bt-contents-memory">
-                                <p>あの日のお酒は… <a href="#">▶︎ Click</a></p>
+                                <p>あの日のお酒は… <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
                             </div>
                             <div class="bt-contents-memo">
-                                <p>思い出を残す <a href="#">▶︎ Click</a></p>
+                                <p>思い出を残す <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
                             </div>
                         </div><!-- /.bottom-bt-contents -->
                     </div><!-- /.bottom-bt -->

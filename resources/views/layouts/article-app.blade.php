@@ -22,7 +22,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/article.css') }}">
 </head>
 
 <body>
@@ -73,7 +73,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -92,7 +92,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
