@@ -61,7 +61,7 @@ return [
     'min'                  => [
         'numeric' => ':attributeには:min以上の数値を指定してください。',
         'file'    => ':attributeには:min KB以上のファイルを指定してください。',
-        'string'  => ':attributeには:min文字以上の文字列を指定してください。',
+        'string'  => ':attributeには:min文字以上の英数字を指定してください。',
         'array'   => ':attributeには:min個以上の要素を持つ配列を指定してください。',
     ],
     'not_in'               => ':attributeには:valuesのうちいずれとも異なる値を指定してください。',
@@ -118,6 +118,8 @@ return [
 
     'attributes' => [
         'password' => 'パスワード',
+        'name' => 'ニックネーム',
+        'email' => 'Email',
     ],
 
 ];

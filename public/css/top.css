@@ -190,6 +190,9 @@ body {
 .responsive {
     display: none;
 }
+.dropdown-toggle::after {
+    content: none;
+}
 
 @media (max-width: 767px) {
     .dropdown {
@@ -199,11 +202,6 @@ body {
     .dropdown.responsive {
         display: block;
     }
-
-    .dropdown-toggle::after {
-        content: none;
-    }
-
     .dropdown-item {
         padding: 1em;
         background-color: #FCE4E7;

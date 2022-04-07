@@ -125,15 +125,15 @@ html {
 .responsive {
     display: none;
 }
+.dropdown-toggle::after {
+    content: none;
+}
 @media (max-width: 767px) {
     .dropdown {
         display: none;
     }
     .dropdown.responsive {
         display: block;
-    }
-    .dropdown-toggle::after {
-        content: none;
     }
     .dropdown-item {
         padding: 1em;

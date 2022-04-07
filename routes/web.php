@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('tops.top');

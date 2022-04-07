@@ -7,16 +7,13 @@
     font-family: "せのびレギュラー";
     src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
 }
-
 @font-face {
     font-family: "HarenosoraMincho";
     src: url("../fonts/Harenosora.otf");
 }
-
 .navbar {
     display: none;
 }
-
 .container {
     position: relative;
     height: 100%;
@@ -30,7 +27,6 @@
         padding-top: 30px;
     }
 }
-
 .auth-text {
     margin-bottom: 23px;
     font-family: "HarenosoraMincho";
@@ -42,7 +38,6 @@
         font-size: 20px;
     }
 }
-
 h1 {
     width: 90px;
     margin: 0 auto 63px;
@@ -53,7 +48,6 @@ h1 {
         margin-bottom: 40px;
     }
 }
-
 h1 a {
     display: block;
     width: 100%;
@@ -69,7 +63,6 @@ h1 a {
         font-size: 35px;
     }
 }
-
 .card-body {
     width: 310px;
     margin: 0 auto;
@@ -79,20 +72,19 @@ h1 a {
         width: 80%;
     }
 }
-
-.form-group {
+.form-group,
+.form-check {
     padding-top: 24px;
 }
 @media (max-width: 500px) {
-    .form-group {
+    .form-group,
+    .form-check {
         padding-top: 15px;
     }
 }
-
 .form-group.tp {
     padding: 0;
 }
-
 .form-group label {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 15px;
@@ -103,11 +95,12 @@ h1 a {
         font-size: 18px;
     }
 }
-
+.form-check .form-check-label {
+    opacity: 0.8;
+}
 .form-group .col-md-6 {
     margin-top: 10px;
 }
-
 input {
     width: 300px;
     height: 30px;
@@ -121,7 +114,15 @@ input {
         width: 100%;
     }
 }
-
+.form-check-input {
+    width: 20px;
+}
+.form-group small {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+}
 .submit-btn {
     width: 70%;
     margin: 0 auto;
@@ -131,7 +132,6 @@ input {
         width: 100%;
     }
 }
-
 .submit-btn button {
     width: 100%;
     height: 40px;
@@ -153,29 +153,23 @@ input {
         margin-top: 20px;
     }
 }
-
 button:hover {
     opacity: 0.7;
 }
-
 .card-footer {
     max-width: 350px;
     margin: 0 auto;
     text-align: center;
 }
-
 .card-footer hr {
     height: 1px;
     margin: 38.5px 0;
     background-color: #fce4e7;
 }
-
 .card-footer p {
     font-family: "HarenosoraMincho";
     font-size: 18px;
 }
-
-
 .card-footer a {
     display: block;
     width: 197px;
@@ -203,11 +197,9 @@ button:hover {
         width:  80%;
     }
 }
-
 .card-footer a:hover {
     opacity: 0.7;
 }
-
 .invalid-feedback {
     display: inline-block;
     margin-top: 5px;
@@ -223,7 +215,6 @@ button:hover {
 #register {
     z-index: 10;
 }
-
 #register::after {
     content: url("../img/auth-bg.png");
     position: absolute;
@@ -237,7 +228,6 @@ button:hover {
         content: none;
     }
 }
-
 #register .card {
     position: static;
     z-index: 10;
@@ -253,7 +243,6 @@ button:hover {
     position: relative;
     z-index: 10;
 }
-
 #login .card::after {
     content: "";
     position: absolute;
@@ -274,15 +263,12 @@ button:hover {
     padding-top: 0;
     margin-top: 40px;
 }
-
 #login .submit-btn button {
     background: #35ad63;
 }
-
 #login .card-footer a {
     background: #359fad;
 }
-
 #login .login-img {
     width: 196px;
     margin: 60px auto 0;
