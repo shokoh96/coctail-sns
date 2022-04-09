@@ -50,16 +50,17 @@
                             </li>
                         </ul>
 
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.create') }}"><i
-                                        class="fas fa-pen mr-2"></i>{{ __('投稿する') }}</a>
-                            </li>
-                        </ul>
-
+                        @auth
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('articles.create') }}"><i
+                                            class="fas fa-pen mr-2"></i>{{ __('投稿する') }}</a>
+                                </li>
+                            </ul>
+                        @endauth
 
                         <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-4 auth">
+                        <ul class="navbar-nav ml-2 auth">
                             <!-- Authentication Links -->
                             @guest
                                 <li class="nav-item">
@@ -80,7 +81,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -99,7 +100,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
