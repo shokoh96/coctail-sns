@@ -233,7 +233,7 @@ textarea {
     height: 96%;
     padding-bottom: 40px;
     margin:  0 auto;
-    background-color: #fff;
+    background-color: rgba(255,255,255,.8);
 }
 .article-form {
     padding-top: 60px;
