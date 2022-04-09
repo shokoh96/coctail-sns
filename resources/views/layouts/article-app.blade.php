@@ -52,7 +52,7 @@
 
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i
+                                <a class="nav-link" href="{{ route('articles.create') }}"><i
                                         class="fas fa-pen mr-2"></i>{{ __('投稿する') }}</a>
                             </li>
                         </ul>
@@ -80,7 +80,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -99,7 +99,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -124,6 +124,16 @@
             <p>copyright &copy; 2022 the 5th class All Rights Reserved</p>
         </footer>
     </div>
+
+    <script>
+        function previewImage(obj) {
+            var fileReader = new FileReader();
+            fileReader.onload = (function() {
+                document.getElementById('preview').src = fileReader.result;
+            });
+            fileReader.readAsDataURL(obj.files[0]);
+        }
+    </script>
 </body>
 
 </html>

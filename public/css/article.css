@@ -1,32 +1,30 @@
 @charset "utf-8";
 
 /* --------------------------------
-          .共通パーツ
+        .共通パーツ
 -------------------------------- */
 /* レイアウト */
 @font-face {
     font-family: "03SmartFontUI";
     src: url("../fonts/03SmartFontUI.ttf");
 }
-
 @font-face {
     font-family: "せのびレギュラー";
     src: url("../fonts/Senobi-Gothic-Regular\ 20.58.13.ttf");
 }
-
 @font-face {
     font-family: "せのびゴシック";
     src: url("../fonts/Senobi-Gothic-Bold.ttf");
 }
-
 html {
     scroll-behavior: smooth;
 }
-
+textarea {
+    resize: none;
+}
 .container {
     max-width: 1117px;
 }
-
 .container-bg {
     position: relative;
     background: linear-gradient(#355469 0%, #1b2a35 100%);
@@ -36,68 +34,55 @@ html {
 .navbar .container {
     max-width: 1320px;
 }
-
 .navbar-expand-md {
     height: 100px;
     border-bottom: 1px solid #FCE4E7;
     background-color: inherit !important;
 }
-
 .navbar-light .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.5);
 }
-
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
     color: #FCE4E7;
     transition: all 0.5s;
 }
-
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-nav .nav-link:hover {
     color: #FCE4E7;
     opacity: 0.7;
 }
-
 .navbar-light .navbar-nav.auth .nav-link {
     color: #FCE4E7;
 }
-
 .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle {
     font-size: 20px;
 }
-
 .navbar-brand {
     font-family: "せのびレギュラー";
     font-size: 25px;
     text-shadow: 3px 3px 3px black;
 }
-
 .navbar-light .navbar-nav .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 17px;
 }
-
 .navbar-expand-md .navbar-nav .nav-item:first-child {
     margin-left: 30px;
     margin-right: 20px;
 }
-
 .navbar-light .navbar-nav.auth .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 17px;
 }
-
 .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
     margin-left: 0;
     margin-right: 10px;
 }
-
 .dropdown-menu {
     padding: 0;
     min-width: 8rem;
 }
-
 .dropdown-item {
     padding: 0.5rem 0;
     font-family: "Hiragino Kaku Gothic ProN";
@@ -105,74 +90,58 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
 }
-
 @media(max-width: 767px) {
     .navbar {
         padding: 0;
     }
-
     .navbar-light .navbar-brand {
         margin-left: 3%;
     }
-
     .navbar-light .navbar-toggler {
         margin-right: 3%;
     }
-
     .navbar-collapse {
         width: 100%;
         background-color: rgba(255, 255, 255);
     }
-
     .navbar-expand-md .navbar-nav .nav-item:first-child {
         margin: 0;
     }
-
     .navbar-expand-md .navbar-nav .nav-item {
         border-bottom: 1px dashed #000;
     }
-
     .navbar-light .navbar-nav.auth .nav-item:last-child {
         border-bottom: none;
     }
-
     .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
         margin: 0;
     }
-
     .navbar-light .navbar-nav .nav-link {
         color: #000;
         padding: 1.5em;
         text-align: center;
     }
-
     .navbar-light .navbar-nav.auth .nav-link {
         color: #000;
     }
 }
-
 .responsive {
     display: none;
 }
-
 @media (max-width: 767px) {
     .dropdown {
         display: none;
     }
-
     .dropdown.responsive {
         display: block;
     }
-
     .dropdown-toggle::after {
         content: none;
     }
-
     .dropdown-item {
         padding: 1em;
         background-color: #FCE4E7;
     }
-
     .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle .fas {
         margin-right: 8px;
     }
@@ -191,7 +160,6 @@ html {
     align-items: center;
     padding: 0 5%;
 }
-
 .footer h3 {
     color: white;
     font-size: 26px;
@@ -200,14 +168,12 @@ html {
     text-shadow: 3px 3px 3px black;
     font-family: "せのびレギュラー";
 }
-
 .footer p {
     color: white;
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 15px;
     font-weight: bold;
 }
-
 @media (max-width: 599px) {
     .footer p {
         font-size: 10px;
@@ -243,4 +209,119 @@ html {
     width: 250px;
     height: 300px;
     border-radius: 0.25rem 0 0 0.25rem;
+}
+
+/* --------------------------------
+        article-create
+-------------------------------- */
+#article-create {
+    padding-top: 65px;
+    padding-bottom: 80px;
+    max-width: 1000px;
+}
+#article-create h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.create-container {
+    background: linear-gradient(#b29f86 0%, #b29f86 20.43%, #473f35 100%);
+    padding-top: 37px;
+    padding-bottom: 40px;
+}
+.create-inner {
+    width: 92%;
+    height: 96%;
+    padding-bottom: 40px;
+    margin:  0 auto;
+    background-color: #fff;
+}
+.article-form {
+    padding-top: 60px;
+}
+.form-content-top .form-tp-left {
+    position: relative;
+    width: 34%;
+}
+.form-content-top .form-tp-left .file-preview {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form-content-top .form-tp-left .file {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    display: block;
+    width: 200px;
+}
+.form-content-top .form-tp-left .file:before {
+    content: '＋写真を選択';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    width: 200px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #BEBEBE;
+    text-align: center;
+}
+
+.form-content-top .form-tp-right {
+    width: 66%;
+    padding-left: 50px;
+}
+#article-create .col-form-label {
+    font-family: "Noto Serif Myanmar";
+    font-size: 20px;
+    font-weight: 500;
+    color: #00577C;
+}
+#article-create .row {
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+.form-content-top .form-tp-right .form-group .col-sm-2 {
+    padding-left: 0;
+    padding-right: 0;
+}
+#article-create .form-group .form-control {
+    border: 1px solid #baa68b;
+    border-radius: 0;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.16) inset;
+}
+#article-create .form-btn {
+    text-align: center;
+}
+#article-create .form-btn button {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    font-family: "ヒラギノ丸ゴ ProN";
+    font-size: 17px;
+    color: #fff;
+    background-color: #355469;
+    border: none;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, .16) inset;
+    transition: all 0.5s;
+}
+#article-create .form-btn button:hover {
+    opacity: 0.8;
+}
+#article-create .back-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+#article-create .back-btn a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+#article-create .back-btn a:hover {
+    opacity: 0.6;
 }
