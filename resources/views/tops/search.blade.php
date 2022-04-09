@@ -14,7 +14,6 @@
                 </div>
 
                 <div class="form-group row col-sm-8 col-12 mx-auto text-center">
-
                     <div class="form-group col-md-4 col-6 base">
                         <label for="base_id" class="col-form-label">お酒のベース</label>
                         <select name="base_id" id="base_id" class="form-control"
@@ -61,7 +60,6 @@
                             ]) }}
                             </select>
                     </div>
-
                 </div>
 
                 <div class="form-group row">

@@ -1,6 +1,6 @@
 @extends('layouts.article-app')
 
-@section('title', '投稿一覧')
+@section('title', 'ここ酒 - 投稿一覧')
 
 @section('content')
     <div class="container" id="article-index">
