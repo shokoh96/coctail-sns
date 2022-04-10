@@ -26,7 +26,8 @@ class ArticleRequest extends FormRequest
         return [
             'name' => 'required',
             'material' => 'max:300',
-            'message' => 'max:500',
+            'comment' => 'max:500',
+            // 'image' => 'image|mimes:jpg.jpeg.png|max:2048',
         ];
     }
 
@@ -35,7 +36,16 @@ class ArticleRequest extends FormRequest
         return [
             'name' => '名前',
             'material' => '作り方',
-            'message' => 'コメント',
+            'comment' => 'コメント',
         ];
     }
+
+    // public function messages()
+    // {
+    //     return [
+    //         'image' => '指定されたファイルが画像ではありません。',
+    //         'mines' => '指定された拡張子（jpg/jpeg/png）ではありません。',
+    //         'max' => 'ファイルサイズは2MB以内にしてください。',
+    //     ];
+    // }
 }
