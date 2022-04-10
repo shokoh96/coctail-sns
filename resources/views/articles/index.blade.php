@@ -64,5 +64,36 @@
                 </div>
             </div>
 
+            @foreach ($articles as $article)
+                <div class="card mb-3 col-11">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/storage/' . $article->image) }}" alt="サンプル画像">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-row">
+                                <i class="fas fa-user-circle fa-3x mr-1"></i>
+                                <div>
+                                    <div class="font-weight-bold">
+                                        {{ $article->user->name }}
+                                    </div>
+                                    <div class="font-weight-lighter">
+                                        {{ $article->created_at->format('Y/m/d H:i') }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-0 pb-2">
+                                <h3 class="h4 card-title">
+                                    {{ $article->name }}
+                                </h3>
+                                <div class="card-text">
+                                    {{ $article->comment }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
         </div>
     @endsection

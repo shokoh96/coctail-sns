@@ -8,37 +8,41 @@
         <div class="create-container">
             <div class="create-inner">
                 <div class="article-form col-10 mx-auto">
-                    <form action="">
+                    <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+                        @csrf
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
                         <div class="form-content">
                             <div class="form-content-top d-flex">
-
                                 <div class="form-tp-left">
                                     <p class="file-preview">
                                         <img id="preview"
                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                             style="max-width:200px;">
                                     </p>
-                                    <input type="file" name="image" accept='image/*' onchange="previewImage(this);"
-                                        class="file">
+                                    <input type="file" id="image" name="image" accept='image/png,image/jpeg,image/jpg'
+                                        onchange="previewImage(this);" class="file">
                                 </div>
-
                                 <div class="form-tp-right">
                                     <div class="form-group row">
                                         <label for="name" class="col-sm-2 col-form-label">名前</label>
                                         <div class="col-sm-10">
-                                            <input type="name" class="form-control" id="name">
+                                            <input type="text" class="form-control" id="name" name="name" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="base" class="col-sm-2 col-form-label">ベース</label>
                                         <div class="col-sm-10">
-                                            <input type="base" class="form-control" id="base" placeholder="ジン、ウォッカ、など">
+                                            <input type="text" name="base" class="form-control" id="base"
+                                                placeholder="ジン、ウォッカ、など">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="taste" class="col-sm-2 col-form-label">味</label>
                                         <div class="col-sm-10">
-                                            <input type="taste" class="form-control" id="taste" placeholder="甘い、辛い、など">
+                                            <input type="text" name="taste" class="form-control" id="taste"
+                                                placeholder="甘い、辛い、など">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -56,9 +60,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="image" class="col-12 col-form-label">コメント(500文字以内)</label>
+                                <label for="comment" class="col-12 col-form-label">コメント(500文字以内)</label>
                                 <div class="col-sm-12">
-                                    <textarea name="image" class="form-control" rows="5" id="image" placeholder=""></textarea>
+                                    <textarea name="comment" class="form-control" rows="5" id="comment" placeholder=""></textarea>
                                 </div>
                             </div>
                         </div>
