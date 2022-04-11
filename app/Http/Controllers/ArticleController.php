@@ -30,12 +30,6 @@ class ArticleController extends Controller
         $filename = $request->file('image')->store('public');
         $article->image = str_replace('public/', '', $filename);
 
-        // $imageFile = $request->image;
-        // if (!is_null($imageFile) && $imageFile->isValid()) {
-        //     Storage::putFile('public/articles', $imageFile);
-        //     $article->image = str_replace('public/articles', '', $imageFile);
-        // }
-
         $article->save();
 
         return redirect()->route('articles.index');
@@ -44,5 +38,21 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         return view('articles.edit', ['article' => $article]);
+    }
+
+    public function update(ArticleRequest $request, Article $article)
+    {
+        $article->fill($request->all());
+        $filename = $request->file('image')->store('public');
+        $article->image = str_replace('public/', '', $filename);
+        $article->save();
+
+        return redirect()->route('articles.index');
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        return redirect()->route('articles.index');
     }
 }
