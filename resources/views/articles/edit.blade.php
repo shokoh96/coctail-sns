@@ -1,17 +1,19 @@
 @extends('layouts.article-app')
 
-@section('title', 'ここ酒 - 新規投稿')
+@section('title', 'ここ酒 - 編集画面')
 
 @section('content')
-    <div class="container" id="article-create">
-        <h1 class="text-center text-white">新規投稿<img src="{{ asset('img/create.png') }}" alt="新規投稿"></h1>
+    <div class="container" id="article-edit">
+        <h1 class="text-center text-white">編集<img src="{{ asset('img/edit.png') }}" alt="編集"></h1>
         <div class="form-container">
             <div class="form-inner">
                 <div class="article-form col-10 mx-auto">
-                    <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('articles.update', ['article' => $article]) }}"
+                        enctype="multipart/form-data">
+                        @method('PATCH')
                         @include('articles.form')
                         <div class="form-btn">
-                            <button type="submit">投稿する</button>
+                            <button type="submit">更新する</button>
                         </div>
                     </form>
                 </div>

@@ -40,4 +40,9 @@ class ArticleController extends Controller
 
         return redirect()->route('articles.index');
     }
+
+    public function edit(Article $article)
+    {
+        return view('articles.edit', ['article' => $article]);
+    }
 }

@@ -212,28 +212,29 @@ textarea {
 }
 
 /* --------------------------------
-        article-create
+    article-create & article-edit
 -------------------------------- */
-#article-create {
+#article-create,
+#article-edit {
     padding-top: 65px;
     padding-bottom: 80px;
     max-width: 1000px;
 }
-#article-create h1 {
+#article-create h1,
+#article-edit h1 {
     margin-bottom: 30px;
     font-size: 30px;
 }
-.create-container {
-    background: linear-gradient(#b29f86 0%, #b29f86 20.43%, #473f35 100%);
+.form-container {
     padding-top: 37px;
     padding-bottom: 40px;
 }
-.create-inner {
+.form-inner {
     width: 92%;
     height: 96%;
     padding-bottom: 40px;
-    margin:  0 auto;
-    background-color: rgba(255,255,255,.8);
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .8);
 }
 .article-form {
     padding-top: 60px;
@@ -247,6 +248,7 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .form-content-top .form-tp-left .file {
     position: absolute;
     bottom: 30px;
@@ -256,6 +258,7 @@ textarea {
     display: block;
     width: 200px;
 }
+
 .form-content-top .form-tp-left .file:before {
     content: '＋写真を選択';
     position: absolute;
@@ -271,33 +274,39 @@ textarea {
     background-color: #BEBEBE;
     text-align: center;
 }
+
 .form-content-top .form-tp-right {
     width: 66%;
     padding-left: 50px;
 }
-#article-create .col-form-label {
+#article-create .row,
+#article-edit .row {
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+#article-create .col-form-label,
+#article-edit .col-form-label {
     font-family: "Noto Serif Myanmar";
     font-size: 20px;
     font-weight: 500;
     color: #00577C;
 }
-#article-create .row {
-    margin-left: 0;
-    margin-bottom: 2rem;
-}
 .form-content-top .form-tp-right .form-group .col-sm-2 {
     padding-left: 0;
     padding-right: 0;
 }
-#article-create .form-group .form-control {
+#article-create .form-group .form-control,
+#article-edit .form-group .form-control {
     border: 1px solid #baa68b;
     border-radius: 0;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.16) inset;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16) inset;
 }
-#article-create .form-btn {
+#article-create .form-btn,
+#article-edit .form-btn {
     text-align: center;
 }
-#article-create .form-btn button {
+#article-create .form-btn button,
+#article-edit .form-btn button {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -309,18 +318,36 @@ textarea {
     box-shadow: 6px 6px 5px rgba(0, 0, 0, .16) inset;
     transition: all 0.5s;
 }
-#article-create .form-btn button:hover {
+#article-create .form-btn button:hover,
+#article-edit .form-btn button:hover {
     opacity: 0.8;
 }
-#article-create .back-btn {
+#article-create .back-btn,
+#article-edit .back-btn {
     margin-top: 30px;
     text-align: center;
 }
-#article-create .back-btn a {
+#article-create .back-btn a,
+#article-edit .back-btn a {
     color: #fff;
     text-decoration: none;
     transition: all 0.5s;
 }
-#article-create .back-btn a:hover {
+#article-create .back-btn a:hover,
+#article-edit .back-btn a:hover {
     opacity: 0.6;
+}
+
+/* --------------------------------
+        article-create
+-------------------------------- */
+#article-create .form-container {
+    background: linear-gradient(#b29f86 0%, #b29f86 20.43%, #473f35 100%);
+}
+
+/* --------------------------------
+        article-edit
+-------------------------------- */
+#article-edit .form-container {
+    background: linear-gradient(#359fad 0%, #1b5057 100%);
 }
