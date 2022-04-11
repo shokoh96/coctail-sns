@@ -210,6 +210,16 @@ textarea {
     height: 300px;
     border-radius: 0.25rem 0 0 0.25rem;
 }
+#article-index .dropdown-menu {
+    border: 0;
+}
+#article-index .dropdown-item:first-child {
+    border-bottom: 0;
+}
+#article-index .dropdown-divider {
+    margin: 0;
+    border: 0;
+}
 
 /* --------------------------------
     article-create & article-edit

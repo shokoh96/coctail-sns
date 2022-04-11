@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="back-btn">
-            <a href="{{ route('articles.index') }}"><i class="fas fa-arrow-circle-left mr-2"></i>思い出一覧に戻る</a>
+            <a href="{{ route('articles.index') }}"><i class="fas fa-arrow-circle-left mr-2"></i>投稿一覧に戻る</a>
         </div>
     </div>
 @endsection
