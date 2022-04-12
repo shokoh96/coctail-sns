@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
 window.Vue = require('vue');
 
@@ -27,6 +27,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import './bootstrap'
+import Vue from 'vue'
+import ArticleLike from './components/ArticleLike'
+
 const app = new Vue({
-    el: '#app',
-});
+  el: '#app',
+  components: {
+    ArticleLike,
+  }
+})
