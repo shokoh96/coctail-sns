@@ -15,6 +15,13 @@
                     <div class="bt-title">
                         <p>{{ $article->created_at->format('Y/m/d H:i') }}</p>
                         <h2>{{ $article->name }}</h2>
+                        <div class="card-body pt-0 pb-2 pl-3">
+                            <div class="card-text">
+                                <article-like>
+
+                                </article-like>
+                            </div>
+                        </div>
                     </div>
                     <div class="bt-content">
                         <div class="content-left">

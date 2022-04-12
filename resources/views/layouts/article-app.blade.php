@@ -81,7 +81,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -100,7 +100,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -117,7 +117,9 @@
             </nav>
 
             <main>
-                @yield('content')
+                <div id="app">
+                    @yield('content')
+                </div>
             </main>
         </div>
         <footer class="footer">
@@ -125,7 +127,7 @@
             <p>copyright &copy; 2022 the 5th class All Rights Reserved</p>
         </footer>
     </div>
-
+    <script src="{{ mix('js/app.js') }}"></script>
     <script>
         function previewImage(obj) {
             var fileReader = new FileReader();
