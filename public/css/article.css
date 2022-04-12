@@ -184,19 +184,129 @@ textarea {
 }
 
 /* --------------------------------
-            article-index
+    article-index & article-show
 -------------------------------- */
-#article-index {
+#article-index,
+#article-show {
     padding-bottom: 50px;
     max-width: 900px;
 }
-#article-index h1 {
+#article-index h1,
+#article-show h1 {
     margin-top: 50px;
     font-family: "せのびレギュラー";
     font-size: 35px;
     color: #fff;
     text-shadow: 5px 4px 3px #000;
 }
+
+/* --------------------------------
+            article-show
+-------------------------------- */
+#article-show .back-btn {
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+#article-show .back-btn.back-btn-bt {
+    margin-top: 40px;
+}
+#article-show .back-btn a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+#article-show .back-btn a:hover {
+    opacity: 0.5;
+}
+.show-container .container-top {
+    height: 60px;
+    background: linear-gradient(#baa68b 0%, #5d5346 100%);
+    text-align: center;
+}
+.show-container .container-top img {
+    width: 60px;
+}
+.show-container .container-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #fce4e7;
+    background: rgba(255, 255, 255, 0.8);
+}
+.show-container .container-bottom .bt-contents {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.bt-contents .bt-title p {
+    margin-bottom: 8px;
+    font-family: "Noto Serif Myanmar";
+    font-size: 15px;
+    font-weight: 600;
+    color: #00577C;
+}
+.bt-contents .bt-title h2 {
+    font-family: "Noto Serif Myanmar";
+    font-weight: bold;
+    color: #2B843C;
+    text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.16);
+}
+.bt-contents .bt-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.bt-contents .bt-content .content-left {
+    width: 40%;
+}
+.bt-contents .bt-content .content-left img {
+    width: 100%;
+}
+.bt-contents .bt-content .content-right {
+    width: 55%;
+}
+.content-right .tag-group .tag {
+    display: flex;
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 15px;
+    font-family: "ヒラギノ丸ゴ ProN";
+}
+.content-right .tag-group .tag span {
+    width: 80px;
+    margin-right: 20px;
+    background: #355469;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.16) inset;
+    text-align: center;
+}
+.content-right .tag-group .tag p {
+    font-size: 18px;
+    color: #355469;
+}
+.content-right .material-title,
+.content-right .comment-title {
+    padding: 0 5px;
+    margin-top: 48px;
+    font-family: "Noto Serif Myanmar";
+    font-size: 22px;
+    font-weight: 600;
+    color: #00577C;
+}
+.content-right hr {
+    margin: 0;
+}
+.content-right .material,
+.content-right .comment {
+    font-family: "Hiragino Kaku Gothic ProN";
+    padding: 0 5px;
+    margin-top: 15px;
+    line-height: 1.8rem;
+}
+
+
+/* --------------------------------
+            article-index
+-------------------------------- */
 #article-index .cards {
     margin: 0 auto;
 }
