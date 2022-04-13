@@ -12,7 +12,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link text-muted">
+                <a href="{{ route('users.likes', ['name' => $user->name]) }}" class="nav-link text-muted">
                     お気に入り
                 </a>
             </li>
