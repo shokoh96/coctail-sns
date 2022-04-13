@@ -471,3 +471,12 @@ textarea {
 #article-edit .form-container {
     background: linear-gradient(#359fad 0%, #1b5057 100%);
 }
+
+
+.heat {
+    transition: all .3s ease 0s;
+}
+
+.big-heat {
+    transform: scale(1.2, 1.2);
+}
