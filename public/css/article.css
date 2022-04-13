@@ -307,26 +307,32 @@ textarea {
 /* --------------------------------
             article-index
 -------------------------------- */
-#article-index .cards {
+#article-index .cards,
+#user-page .cards {
     margin: 0 auto;
 }
-#article-index .card {
+#article-index .card,
+#user-page .card {
     padding: 0;
     border: 0;
     margin: 0 auto;
 }
-#article-index .card img {
+#article-index .card img,
+#user-page .card img {
     width: 250px;
     height: 300px;
     border-radius: 0.25rem 0 0 0.25rem;
 }
-#article-index .dropdown-menu {
+#article-index .dropdown-menu,
+#user-page .dropdown-menu {
     border: 0;
 }
-#article-index .dropdown-item:first-child {
+#article-index .dropdown-item:first-child,
+#user-page .dropdown-item:first-child {
     border-bottom: 0;
 }
-#article-index .dropdown-divider {
+#article-index .dropdown-divider,
+#user-page .dropdown-divider {
     margin: 0;
     border: 0;
 }

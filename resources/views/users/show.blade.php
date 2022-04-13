@@ -3,7 +3,7 @@
 @section('title', $user->name)
 
 @section('content')
-    <div class="container">
+    <div class="container" id="user-page">
         <div class="card mt-3">
             <div class="card-body">
                 <div class="d-flex flex-row">
@@ -34,5 +34,22 @@
                 </div>
             </div>
         </div>
+        <ul class="nav nav-tabs nav-justified mt-3">
+            <li class="nav-item">
+                <a href="{{ route('users.show', ['name' => $user->name]) }}" class="nav-link text-muted active">
+                    投稿
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link text-muted">
+                    お気に入り
+                </a>
+            </li>
+        </ul>
+        @foreach ($articles as $article)
+            @include('articles.card')
+        @endforeach
+
+
     </div>
 @endsection
