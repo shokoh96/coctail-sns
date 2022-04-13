@@ -10,9 +10,6 @@
 
     <title>@yield('title')</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -81,7 +78,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                            document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
@@ -127,7 +124,6 @@
         </footer>
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
     <script>
         function previewImage(obj) {
             var fileReader = new FileReader();
