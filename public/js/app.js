@@ -2076,6 +2076,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
 //
 //
 //
@@ -2097,6 +2106,13 @@ __webpack_require__.r(__webpack_exports__);
     initialIsFollowedBy: {
       type: Boolean,
       "default": false
+    },
+    authorized: {
+      type: Boolean,
+      "default": false
+    },
+    endpoint: {
+      type: String
     }
   },
   data: function data() {
@@ -2113,6 +2129,64 @@ __webpack_require__.r(__webpack_exports__);
     },
     buttonText: function buttonText() {
       return this.isFollowedBy ? 'フォロー中' : 'フォロー';
+    }
+  },
+  methods: {
+    clickFollow: function clickFollow() {
+      if (!this.authorized) {
+        alert('フォロー機能はログイン中のみ使用できます');
+        return;
+      }
+
+      this.isFollowedBy ? this.unfollow() : this.follow();
+    },
+    follow: function follow() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.put(_this.endpoint);
+
+              case 2:
+                response = _context.sent;
+                _this.isFollowedBy = true;
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    unfollow: function unfollow() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return axios["delete"](_this2.endpoint);
+
+              case 2:
+                response = _context2.sent;
+                _this2.isFollowedBy = false;
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   }
 });
@@ -38560,6 +38634,7 @@ var render = function () {
       {
         staticClass: "btn-sm shadow-none border border-primary p-2",
         class: _vm.buttonColor,
+        on: { click: _vm.clickFollow },
       },
       [
         _c("i", { staticClass: "mr-1", class: _vm.buttonIcon }),
