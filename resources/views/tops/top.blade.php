@@ -24,7 +24,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link"
-                                                href="{{ route('articles.index') }}">{{ __('記録一覧') }}</a>
+                                                href="{{ route('articles.index') }}">{{ __('投稿一覧') }}</a>
                                         </li>
                                     </ul>
 
@@ -110,7 +110,7 @@
                                             <a class="cocktail-serach" href="/search">お酒を探す</a>
                                         </li>
                                         <li>
-                                            <a class="cocktail-memo" href="{{ route('articles.index') }}">お酒を記録する</a>
+                                            <a class="cocktail-memo" href="{{ route('articles.index') }}">お酒を共有する</a>
                                         </li>
                                     </ul>
                                 </div><!-- /.top-right-btn -->
@@ -136,7 +136,7 @@
                                 お酒に詳しくない<br>
                                 気分で決めたい<br>
                                 思い出したい<br>
-                                記録したい
+                                共有したい
                             </p>
                             <p>
                                 あなたのお酒と出会える場所に
@@ -153,10 +153,10 @@
                                 <p>お酒を探す？ <a href="search">▶︎ Click</a></p>
                             </div>
                             <div class="bt-contents-memory">
-                                <p>あの日のお酒は… <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
+                                <p>みんなは何をのんでる？ <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
                             </div>
                             <div class="bt-contents-memo">
-                                <p>思い出を残す <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
+                                <p>お酒を共有する <a href="{{ route('articles.index') }}">▶︎ Click</a></p>
                             </div>
                         </div><!-- /.bottom-bt-contents -->
                     </div><!-- /.bottom-bt -->

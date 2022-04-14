@@ -9,7 +9,6 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        // dd($request);
         $word = $request->word;
         $base = $request->base_id;
         $taste = $request->taste_id;
