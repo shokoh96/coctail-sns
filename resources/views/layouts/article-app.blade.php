@@ -43,7 +43,7 @@
                                 <a class="nav-link" href="/search">{{ __('お酒検索') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.index') }}">{{ __('記録一覧') }}</a>
+                                <a class="nav-link" href="{{ route('articles.index') }}">{{ __('投稿一覧') }}</a>
                             </li>
                         </ul>
 
@@ -127,15 +127,12 @@
         </footer>
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
-    <script>
-        function previewImage(obj) {
-            var fileReader = new FileReader();
-            fileReader.onload = (function() {
-                document.getElementById('preview').src = fileReader.result;
-            });
-            fileReader.readAsDataURL(obj.files[0]);
-        }
-    </script>
+    <script src="{{ asset('js/article.js') }}"></script>
+
+    {{-- <script>
+
+    </script> --}}
+
 </body>
 
 </html>
