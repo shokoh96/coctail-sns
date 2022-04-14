@@ -352,11 +352,6 @@ html {
     flex-wrap: wrap;
     margin: 0 auto;
 }
-/* @media (max-width: 680px) {
-    .cards .row {
-        flex-direction: column;
-    }
-} */
 .cards .row>* {
     padding-right: calc(var(--bs-gutter-x) * 0.9);
     padding-left: calc(var(--bs-gutter-x) * 0.6);
