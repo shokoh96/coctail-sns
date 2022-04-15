@@ -10,7 +10,7 @@
                     @if (empty($article->image)) src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 @else
                 src="{{ asset('/storage/' . $article->image) }}" @endif
-                    style="max-width:200px;">
+                    style="max-width:200px; max-height: 265px;">
             </p>
             <input type="file" id="image" name="image" accept='image/png,image/jpeg,image/jpg'
                 onchange="previewImage(this);" class="file" value="{{ $article->image ?? old('image') }}">
