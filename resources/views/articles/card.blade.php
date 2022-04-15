@@ -1,7 +1,8 @@
 <div class="card mb-3 col-11">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <img src="{{ asset('/storage/' . $article->image) }}" alt="サンプル画像">
+            <a href="{{ route('articles.show', ['article' => $article]) }}"><img
+                    src="{{ asset('/storage/' . $article->image) }}" alt="お酒の画像"></a>
         </div>
         <div class="col-md-8">
             <div class="card-body d-flex flex-row">
@@ -20,7 +21,7 @@
                 </div>
                 @if (Auth::id() === $article->user_id)
                     <!-- dropdown -->
-                    <div class="ml-auto card-text">
+                    <div class="ml-auto">
                         <div class="dropdown">
                             <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <button type="button" class="btn btn-link text-muted m-0 p-2">
@@ -68,7 +69,7 @@
                     <!-- modal -->
                 @endif
             </div>
-            <div class="card-body pt-0 pb-2">
+            <div class="card-body card-content pt-0 pb-2">
                 <h3 class="h4 card-title">
                     <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
                         {{ $article->name }}
@@ -77,9 +78,7 @@
                 <div class="card-text">
                     {{ $article->comment }}
                 </div>
-            </div>
-            <div class="card-body pt-0 pb-2 pl-3">
-                <div class="card-text">
+                <div class="card-text card-heat">
                     <article-like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
                         :initial-count-likes='@json($article->count_likes)' :authorized='@json(Auth::check())'
                         endpoint="{{ route('articles.like', ['article' => $article]) }}">

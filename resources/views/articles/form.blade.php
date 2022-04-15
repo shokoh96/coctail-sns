@@ -49,15 +49,15 @@
     <div class="form-group row mt-4">
         <label for="material" class="col-12 col-form-label">作り方(300文字以内)</label>
         <div class="col-sm-12">
-            <textarea name="material" class="form-control" rows="3" id="material"
-                placeholder="">{{ $article->material ?? old('material') }}</textarea>
+            <textarea name="material" class="form-control" rows="3" id="material" placeholder=""
+                maxlength="300">{{ $article->material ?? old('material') }}</textarea>
         </div>
     </div>
     <div class="form-group row">
         <label for="comment" class="col-12 col-form-label">コメント(500文字以内)</label>
         <div class="col-sm-12">
-            <textarea name="comment" class="form-control" rows="5" id="comment"
-                placeholder="">{{ $article->comment ?? old('comment') }}</textarea>
+            <textarea name="comment" class="form-control" rows="5" id="comment" placeholder=""
+                maxlength="500">{{ $article->comment ?? old('comment') }}</textarea>
         </div>
     </div>
 </div>
