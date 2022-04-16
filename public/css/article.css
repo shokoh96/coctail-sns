@@ -177,6 +177,16 @@ textarea {
     left: 50%;
     transform: translate(-55%, -55%);
 }
+/* ----- #favorite ----- */
+.card .card-heat .btn {
+    font-size: 20px;
+}
+.heat {
+    transition: all .3s ease 0s;
+}
+.big-heat {
+    transform: scale(1.2, 1.2);
+}
 
 /* ----- footer ----- */
 .footer {
@@ -267,18 +277,18 @@ textarea {
     max-width: 800px;
     margin: 0 auto;
 }
-.bt-contents .bt-title p {
-    margin-bottom: 8px;
-    font-family: "Noto Serif Myanmar";
-    font-size: 15px;
-    font-weight: 600;
-    color: #00577C;
-}
 .bt-contents .bt-title h2 {
+    margin-top: 30px;
     font-family: "Noto Serif Myanmar";
     font-weight: bold;
     color: #2B843C;
     text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.16);
+}
+#article-show .card-heat {
+    font-size: 20px;
+}
+#article-show .card-heat .btn {
+    font-size: 20px;
 }
 .bt-contents .bt-content {
     display: flex;
@@ -333,7 +343,6 @@ textarea {
     margin-top: 15px;
     line-height: 1.8rem;
 }
-
 
 /* --------------------------------
             article-index
@@ -393,15 +402,6 @@ textarea {
     font-size: 18px;
     z-index: 1;
 }
-#article-index .card .card-heat .btn {
-    font-size: 20px;
-}
-.heat {
-    transition: all .3s ease 0s;
-}
-.big-heat {
-    transform: scale(1.2, 1.2);
-}
 
 /* --------------------------------
     article-create & article-edit
@@ -450,7 +450,6 @@ textarea {
     display: block;
     width: 200px;
 }
-
 .form-content-top .form-tp-left .file:before {
     content: '＋写真を選択';
     position: absolute;
@@ -466,7 +465,6 @@ textarea {
     background-color: #BEBEBE;
     text-align: center;
 }
-
 .form-content-top .form-tp-right {
     width: 66%;
     padding-left: 50px;

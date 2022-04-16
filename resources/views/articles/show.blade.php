@@ -12,13 +12,29 @@
             <div class="container-top"><img src="{{ asset('img/show.png') }}" alt="投稿詳細画像"></div>
             <div class="container-bottom">
                 <div class="bt-contents">
-                    <div class="bt-title">
-                        <p>{{ $article->created_at->format('Y/m/d H:i') }}</p>
-                        <h2>{{ $article->name }}</h2>
-                        <div class="card-body pt-0 pb-2 pl-3">
-                            <div class="card-text">
-                                <article-like>
 
+                    <div class="d-flex">
+                        <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+                            <i class="fas fa-user-circle fa-2x mr-1"></i>
+                        </a>
+                        <div class="w-100">
+                            <div class="font-weight-bold d-flex justify-content-between">
+                                <a href="{{ route('users.show', ['name' => $article->user->name]) }}"
+                                    class="text-dark h4">
+                                    {{ $article->user->name }}
+                                </a>
+                                <p class="mt-1 mb-0 h5">{{ $article->created_at->format('Y/m/d H:i') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bt-title d-flex justify-content-between align-items-center">
+                        <h2>{{ $article->name }}</h2>
+                        <div>
+                            <div class="card-text card-heat">
+                                <article-like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
+                                    :initial-count-likes='@json($article->count_likes)'
+                                    :authorized='@json(Auth::check())'
+                                    endpoint="{{ route('articles.like', ['article' => $article]) }}">
                                 </article-like>
                             </div>
                         </div>
