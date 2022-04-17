@@ -67,9 +67,7 @@
         </div><!-- /.search-result-container -->
 
         @if (!empty($posts))
-            <div class="page-top-btn">
-                <a href="#page-top"><i class="fas fa-angle-up"></i></a>
-            </div><!-- /.top-btn -->
+            <div id="page_top"><a href="#"></a></div>
         @endif
     </div>
 @endsection

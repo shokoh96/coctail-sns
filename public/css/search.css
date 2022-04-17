@@ -277,7 +277,7 @@ html {
 #search-form .form-group {
     margin-bottom: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #search-form .row {
         margin: 0;
     }
@@ -329,9 +329,13 @@ html {
 /* --------------------------------
         #search_result
 -------------------------------- */
+#search-result {
+    padding-bottom: 100px;
+}
 @media (max-width: 680px) {
     #search-result {
         padding: 0 20px;
+        padding-bottom: 50px;
     }
 }
 .search-result-container h1 {
@@ -518,25 +522,64 @@ html {
 }
 
 /* --------- .page-top.btn --------- */
-.page-top-btn {
-    padding-top: 117px;
-    padding-bottom: 55px;
+#page_top {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 100px;
+    bottom: 120px;
+    background: inherit;
+    opacity: 0.6;
+    border: 1px solid #fff;
+    border-radius: 50%;
 }
-.page-top-btn a {
+@media(max-width: 1400px) {
+    #page_top {
+        right: 50px;
+    }
+}
+@media(max-width: 1300px) {
+    #page_top {
+        right: 20px;
+    }
+}
+@media(max-width: 1100px) {
+    #page_top {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+@media(max-width: 680px) {
+    #page_top {
+        left: 10px;
+        bottom: 20px;
+        border: 1px solid #fff;
+        z-index: 20;
+    }
+}
+#page_top a {
+    position: relative;
     display: block;
-    color: #fce4e7;
-    text-align: center;
-    margin-top: 2px;
-    border: 3px solid #fce4e7;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
 }
-.page-top-btn .fas {
-    font-size: 29px;
+#page_top a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f062';
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -55%);
 }
+@media(max-width: 1100px) {
+    #page_top a::before {
+        color: #000;
+    }
+}
+
 /* -- Not Found -- */
 .not-found {
     position: relative;
