@@ -225,6 +225,69 @@ textarea {
 }
 
 /* --------------------------------
+    article-index & user-page
+-------------------------------- */
+#article-index .cards,
+#user-page .cards {
+    margin: 0 auto;
+}
+#article-index .card,
+#user-page .card {
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+}
+#article-index .dropdown-menu,
+#user-page .dropdown-menu {
+    border: 0;
+}
+#article-index .dropdown-item:first-child,
+#user-page .dropdown-item:first-child {
+    border-bottom: 0;
+}
+#article-index .dropdown-divider,
+#user-page .dropdown-divider {
+    margin: 0;
+    border: 0;
+}
+#article-index .card img,
+#user-page .card img {
+    width: 250px;
+    height: 300px;
+    border-radius: 0.25rem 0 0 0.25rem;
+    transition: all 0.3s;
+    object-fit: cover;
+}
+#article-index .card img:hover,
+#user-page .card img:hover {
+    opacity: 0.9;
+}
+#article-index .no-gutters,
+#user-page .no-gutters {
+    height: 300px;
+}
+#article-index .card .card-content,
+#user-page .card .card-content {
+    position: relative;
+    height: 200px;
+}
+#article-index .card .card-text,
+#user-page .card .card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+#article-index .card .card-heat,
+#user-page .card .card-heat {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+/* --------------------------------
     article-index & article-show
 -------------------------------- */
 #article-index,
@@ -345,65 +408,6 @@ textarea {
 }
 
 /* --------------------------------
-            article-index
--------------------------------- */
-#article-index .cards,
-#user-page .cards {
-    margin: 0 auto;
-}
-#article-index .card,
-#user-page .card {
-    padding: 0;
-    border: 0;
-    margin: 0 auto;
-}
-#article-index .dropdown-menu,
-#user-page .dropdown-menu {
-    border: 0;
-}
-#article-index .dropdown-item:first-child,
-#user-page .dropdown-item:first-child {
-    border-bottom: 0;
-}
-#article-index .dropdown-divider,
-#user-page .dropdown-divider {
-    margin: 0;
-    border: 0;
-}
-#article-index .card img,
-#user-page .card img {
-    width: 250px;
-    height: 300px;
-    border-radius: 0.25rem 0 0 0.25rem;
-    transition: all 0.3s;
-    object-fit: cover;
-}
-#article-index .card img:hover,
-#user-page .card img:hover {
-    opacity: 0.9;
-}
-#article-index .no-gutters {
-    height: 300px;
-}
-#article-index .card .card-content {
-    position: relative;
-    height: 200px;
-}
-#article-index .card .card-text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-}
-#article-index .card .card-heat {
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-    font-size: 18px;
-    z-index: 1;
-}
-
-/* --------------------------------
     article-create & article-edit
 -------------------------------- */
 #article-create,
@@ -440,7 +444,6 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .form-content-top .form-tp-left .file {
     position: absolute;
     bottom: 30px;
@@ -540,4 +543,29 @@ textarea {
 -------------------------------- */
 #article-edit .form-container {
     background: linear-gradient(#359fad 0%, #1b5057 100%);
+}
+
+/* --------------------------------
+        users/user-page
+-------------------------------- */
+#user-page {
+    max-width: 900px;
+    min-height: 85vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.no-article {
+    padding-top: 50px;
+}
+.no-article h2 {
+    font-family: "せのびレギュラー";
+    text-shadow: 5px 4px 3px #000;
+}
+.no-article img {
+    width: 200px;
+    margin: 20px 0;
+}
+.no-article p {
+    font-family: "せのびレギュラー";
+    text-shadow: 5px 4px 3px #000;
 }

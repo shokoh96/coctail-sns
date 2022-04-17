@@ -1,4 +1,4 @@
-<div class="card mt-3">
+<div class="card col-11 mx-auto pr-0">
     <div class="card-body">
         <div class="d-flex flex-row">
             <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
@@ -11,7 +11,7 @@
                 </follow-button>
             @endif
         </div>
-        <h2 class="h5 card-title m-0">
+        <h2 class="h4 card-title m-0 mt-1">
             <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
                 {{ $user->name }}
             </a>
@@ -19,7 +19,7 @@
     </div>
     <div class="card-body">
         <div class="card-text">
-            <a href="{{ route('users.followings', ['name' => $user->name]) }}" class="text-muted">
+            <a href="{{ route('users.followings', ['name' => $user->name]) }}" class="text-muted mr-3">
                 {{ $user->count_followings }}フォロー
             </a>
             <a href="{{ route('users.followers', ['name' => $user->name]) }}" class="text-muted">
