@@ -85,7 +85,12 @@ html {
     font-family: "Hiragino Kaku Gothic ProN";
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
+}
+.dropdown-item:first-child:hover {
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+.dropdown-item:nth-child(2):hover {
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 @media(max-width: 767px) {
     .navbar {
@@ -146,7 +151,6 @@ html {
 
 /* ----- main ----- */
 
-
 /* ----- footer ----- */
 .footer {
     position: absolute;
@@ -160,7 +164,6 @@ html {
     align-items: center;
     padding: 0 5%;
 }
-
 .footer h3 {
     color: white;
     font-size: 26px;
@@ -169,7 +172,6 @@ html {
     text-shadow: 3px 3px 3px black;
     font-family: "せのびレギュラー";
 }
-
 .footer p {
     color: white;
     font-family: "Hiragino Kaku Gothic ProN";

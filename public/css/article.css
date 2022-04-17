@@ -88,7 +88,12 @@ textarea {
     font-family: "Hiragino Kaku Gothic ProN";
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
+}
+.dropdown-item:first-child:hover {
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+.dropdown-item:nth-child(2):hover {
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 @media(max-width: 767px) {
     .navbar {

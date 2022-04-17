@@ -67,7 +67,8 @@
                                         <i class="fas fa-user mr-2"></i>{{ Auth::user()->name }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu dropdown-menu-right border-0"
+                                        aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item border-bottom-0"
                                             href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
                                             {{ __('マイページ') }}
@@ -92,7 +93,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                                                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                                                                                                document.getElementById('logout-form').submit();">
                                             {{ __('ログアウト') }}
                                         </a>
 
