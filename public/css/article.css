@@ -247,6 +247,7 @@ textarea {
     padding: 0;
     border: 0;
     margin: 0 auto;
+    background: rgba(255, 255, 255, .8);
 }
 #article-index .dropdown-menu,
 #user-page .dropdown-menu {
@@ -281,6 +282,17 @@ textarea {
 #user-page .card .card-content {
     position: relative;
     height: 200px;
+}
+#article-index .card .card-title,
+#user-page .card .card-title {
+    margin-bottom: 3px;
+    font-family: "Noto Serif Myanmar";
+    font-weight: bold;
+    text-shadow: 4px 3px 3px rgb(0 0 0 / 16%);
+}
+#article-index .card .card-title a,
+#user-page .card .card-title a {
+    text-decoration: none;
 }
 #article-index .card .card-text,
 #user-page .card .card-text {
@@ -598,4 +610,7 @@ textarea {
 .no-article p {
     font-family: "せのびレギュラー";
     text-shadow: 5px 4px 3px #000;
+}
+.follow:hover {
+    color: #000 !important;
 }

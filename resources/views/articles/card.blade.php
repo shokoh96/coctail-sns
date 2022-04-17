@@ -11,7 +11,8 @@
                 </a>
                 <div>
                     <div class="font-weight-bold">
-                        <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+                        <a href="{{ route('users.show', ['name' => $article->user->name]) }}"
+                            class="text-dark text-decoration-none">
                             {{ $article->user->name }}
                         </a>
                     </div>
@@ -31,7 +32,7 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="{{ route('articles.edit', ['article' => $article]) }}"
                                     class="dropdown-item">
-                                    <i class="fas fa-pen mr-1"></i>記事を更新する
+                                    <i class="fas fa-pen mr-1"></i>記事を編集する
                                 </a>
                                 <a class="dropdown-item text-danger" data-toggle="modal"
                                     data-target="#modal-delete-{{ $article->id }}">
@@ -69,7 +70,7 @@
                 @endif
             </div>
             <div class="card-body card-content pt-0 pb-2">
-                <h3 class="h4 card-title">
+                <h3 class="h3 card-title">
                     <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
                         {{ $article->name }}
                     </a>

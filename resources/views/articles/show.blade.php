@@ -31,7 +31,7 @@
                         <div class="w-100">
                             <div class="font-weight-bold d-flex justify-content-between">
                                 <a href="{{ route('users.show', ['name' => $article->user->name]) }}"
-                                    class="text-dark h4">
+                                    class="text-dark h4 text-decoration-none">
                                     {{ $article->user->name }}
                                 </a>
                                 <p class="mt-1 mb-0 h5">{{ $article->created_at->format('Y/m/d H:i') }}</p>
