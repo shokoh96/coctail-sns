@@ -88,7 +88,12 @@ textarea {
     font-family: "Hiragino Kaku Gothic ProN";
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
+}
+.dropdown-item:first-child:hover {
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+.dropdown-item:nth-child(2):hover {
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 @media(max-width: 767px) {
     .navbar {
@@ -187,6 +192,15 @@ textarea {
 .big-heat {
     transform: scale(1.2, 1.2);
 }
+/* ----- modal----- */
+.dropdown-toggle::after {
+    content: none;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        margin: 7rem auto;
+    }
+}
 
 /* ----- footer ----- */
 .footer {
@@ -220,9 +234,6 @@ textarea {
         font-size: 10px;
     }
 }
-.dropdown-toggle::after {
-    content: none;
-}
 
 /* --------------------------------
     article-index & user-page
@@ -236,6 +247,7 @@ textarea {
     padding: 0;
     border: 0;
     margin: 0 auto;
+    background: rgba(255, 255, 255, .8);
 }
 #article-index .dropdown-menu,
 #user-page .dropdown-menu {
@@ -270,6 +282,17 @@ textarea {
 #user-page .card .card-content {
     position: relative;
     height: 200px;
+}
+#article-index .card .card-title,
+#user-page .card .card-title {
+    margin-bottom: 3px;
+    font-family: "Noto Serif Myanmar";
+    font-weight: bold;
+    text-shadow: 4px 3px 3px rgb(0 0 0 / 16%);
+}
+#article-index .card .card-title a,
+#user-page .card .card-title a {
+    text-decoration: none;
 }
 #article-index .card .card-text,
 #user-page .card .card-text {
@@ -329,6 +352,18 @@ textarea {
 }
 .show-container .container-top img {
     width: 60px;
+}
+.show-container .container-top a {
+    width: 120px;
+    height: 75%;
+    border: 0;
+    color: #fff;
+    background: linear-gradient(#356945 0%, #1b3523 100%);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: all 0.5s;
+}
+.show-container .container-top a:hover {
+    opacity: 0.7;
 }
 .show-container .container-bottom {
     padding-top: 40px;
@@ -499,7 +534,8 @@ textarea {
     text-align: center;
 }
 #article-create .form-btn button,
-#article-edit .form-btn button {
+#article-edit .form-btn button,
+#article-edit .form-btn a {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -512,8 +548,14 @@ textarea {
     transition: all 0.5s;
 }
 #article-create .form-btn button:hover,
-#article-edit .form-btn button:hover {
+#article-edit .form-btn button:hover,
+#article-edit .form-btn a:hover {
     opacity: 0.8;
+}
+#article-edit .form-btn a {
+    color: #fff;
+    background: #bc4b4b;
+    box-shadow: 6px 6px 5px rgb(0 0 0 / 16%) inset;
 }
 #article-create .back-btn,
 #article-edit .back-btn {
@@ -568,4 +610,7 @@ textarea {
 .no-article p {
     font-family: "せのびレギュラー";
     text-shadow: 5px 4px 3px #000;
+}
+.follow:hover {
+    color: #000 !important;
 }

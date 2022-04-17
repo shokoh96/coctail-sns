@@ -77,128 +77,107 @@ body {
 .shadow-sm {
     box-shadow: none !important;
 }
-
 .navbar-light .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.5);
 }
-
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
     color: #FCE4E7;
     transition: all 0.5s;
 }
-
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-nav .nav-link:hover {
     color: #FCE4E7;
     opacity: 0.7;
 }
-
 .navbar-light .navbar-nav.auth .nav-link {
     color: #FCE4E7;
-    /* color: #002c3e; */
 }
-
 .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle {
     font-size: 20px;
 }
-
 .navbar-brand {
     font-family: "せのびレギュラー";
     font-size: 25px;
     text-shadow: 3px 3px 3px black;
 }
-
 .navbar-light .navbar-nav .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 17px;
 }
-
 .navbar-expand-md .navbar-nav .nav-item:first-child {
     margin-left: 30px;
     margin-right: 20px;
 }
-
 .navbar-light .navbar-nav.auth .nav-link {
     font-family: "Hiragino Kaku Gothic ProN";
     font-size: 17px;
 }
-
 .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
     margin-left: 0;
     margin-right: 10px;
 }
-
 .dropdown-menu {
     padding: 0;
     min-width: 8rem;
 }
-
 .dropdown-item {
     padding: 0.5rem 0;
     font-family: "Hiragino Kaku Gothic ProN";
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
 }
-
+.dropdown-item:first-child:hover {
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+.dropdown-item:nth-child(2):hover {
+    border-radius: 0 0 0.25rem 0.25rem;
+}
 @media(max-width: 767px) {
     .navbar {
         padding: 0;
     }
-
     .navbar-light .navbar-brand {
         margin-left: 3%;
     }
-
     .navbar-light .navbar-toggler {
         margin-right: 3%;
     }
-
     .navbar-collapse {
         width: 100%;
         background-color: rgba(255, 255, 255);
     }
-
     .navbar-expand-md .navbar-nav .nav-item:first-child {
         margin: 0;
     }
-
     .navbar-expand-md .navbar-nav .nav-item {
         border-bottom: 1px dashed #000;
     }
-
     .navbar-light .navbar-nav.auth .nav-item:last-child {
         border-bottom: none;
     }
-
     .navbar-expand-md .navbar-nav.auth .nav-item:first-child {
         margin: 0;
     }
-
     .navbar-light .navbar-nav .nav-link {
         color: #000;
         padding: 1.5em;
         text-align: center;
     }
-
     .navbar-light .navbar-nav.auth .nav-link {
         color: #000;
     }
 }
-
 .responsive {
     display: none;
 }
 .dropdown-toggle::after {
     content: none;
 }
-
 @media (max-width: 767px) {
     .dropdown {
         display: none;
     }
-
     .dropdown.responsive {
         display: block;
     }
@@ -206,7 +185,6 @@ body {
         padding: 1em;
         background-color: #FCE4E7;
     }
-
     .navbar-light .navbar-nav.auth .nav-link.dropdown-toggle .fas {
         margin-right: 8px;
     }
@@ -257,7 +235,6 @@ body {
         margin: 0 3%;
     }
 }
-
 .main-top::after {
     content: url(../img/top_man.png);
     position: absolute;
@@ -291,6 +268,7 @@ body {
         left: auto;
         right: 10px;
     }
+
 }
 /* top-left */
 .top-left {
@@ -363,6 +341,7 @@ h1 + p {
         font-size: 19px;
     }
 }
+
 /* top-right */
 @media (max-width: 660px) {
     .top-right {
@@ -442,11 +421,7 @@ h1 + p {
         height:  300px;
     }
 }
-/* @media screen and (max-width: 768px) {
-    #bottom-header {
-        height: 90vh;
-    }
-} */
+
 /* scrolldown */
 .scrolldown {
     position: absolute;
@@ -634,6 +609,7 @@ h1 + p {
         width: 300px;
     }
 }
+
 /* bottom-bt */
 .bottom-bt {
     position: relative;

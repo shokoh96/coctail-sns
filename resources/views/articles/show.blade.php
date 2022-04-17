@@ -9,7 +9,18 @@
             <a href="javascript:history.back()">戻る</a>
         </div>
         <div class="show-container">
-            <div class="container-top"><img src="{{ asset('img/show.png') }}" alt="投稿詳細画像"></div>
+            @if (Auth::id() !== $article->user_id)
+                <div class="container-top">
+                    <img src="{{ asset('img/show.png') }}" alt="投稿詳細画像">
+                </div>
+            @else
+                <div class="container-top d-flex justify-content-between align-items-center px-4">
+                    <img src="{{ asset('img/show.png') }}" alt="投稿詳細画像">
+                    <a href="{{ route('articles.edit', ['article' => $article]) }}" class="dropdown-item">
+                        <i class="fas fa-pen mr-1"></i>投稿編集
+                    </a>
+                </div>
+            @endif
             <div class="container-bottom">
                 <div class="bt-contents">
 
@@ -20,7 +31,7 @@
                         <div class="w-100">
                             <div class="font-weight-bold d-flex justify-content-between">
                                 <a href="{{ route('users.show', ['name' => $article->user->name]) }}"
-                                    class="text-dark h4">
+                                    class="text-dark h4 text-decoration-none">
                                     {{ $article->user->name }}
                                 </a>
                                 <p class="mt-1 mb-0 h5">{{ $article->created_at->format('Y/m/d H:i') }}</p>
