@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -47,8 +46,12 @@ class ArticleController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         $article->fill($request->all());
-        $filename = $request->file('image')->store('public');
-        $article->image = str_replace('public/', '', $filename);
+        if (!empty($request->image)) {
+            $filename = $request->file('image')->store('public');
+            $article->image = str_replace('public/', '', $filename);
+        } else {
+            $article->image;
+        }
         $article->save();
 
         return redirect()->route('articles.index');
