@@ -231,7 +231,7 @@ textarea {
     content: none;
 }
 .modal-dialog {
-    margin: 30vh 20px;
+    margin: 30vh auto;
 }
 
 /* ----- footer ----- */
