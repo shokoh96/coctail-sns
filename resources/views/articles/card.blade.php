@@ -32,11 +32,11 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="{{ route('articles.edit', ['article' => $article]) }}"
                                     class="dropdown-item">
-                                    <i class="fas fa-pen mr-1"></i>記事を編集する
+                                    <i class="fas fa-pen mr-1"></i>編集する
                                 </a>
                                 <a class="dropdown-item text-danger" data-toggle="modal"
                                     data-target="#modal-delete-{{ $article->id }}">
-                                    <i class="fas fa-trash-alt mr-1"></i>記事を削除する
+                                    <i class="fas fa-trash-alt mr-1"></i>削除する
                                 </a>
                             </div>
                         </div>
