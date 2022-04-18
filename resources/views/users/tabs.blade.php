@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs nav-justified mt-3 mb-3 col-11 mx-auto pr-0">
+<ul class="nav nav-tabs nav-justified mt-3 mb-3 col-md-11 col-12 mx-auto pr-0">
     <li class="nav-item">
         <a class="nav-link text-muted {{ $hasArticles ? 'active' : '' }}"
             href="{{ route('users.show', ['name' => $user->name]) }}">

@@ -146,6 +146,7 @@ body {
     .navbar-collapse {
         width: 100%;
         background-color: rgba(255, 255, 255);
+        z-index: 100;
     }
     .navbar-expand-md .navbar-nav .nav-item:first-child {
         margin: 0;
