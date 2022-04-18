@@ -164,6 +164,30 @@ textarea {
     border: 1px solid #fff;
     border-radius: 50%;
 }
+@media(max-width: 1300px) {
+    #page_top {
+        right: 100px;
+    }
+}
+@media(max-width: 1200px) {
+    #page_top {
+        right: 50px;
+    }
+}
+@media(max-width: 1050px) {
+    #page_top {
+        right: 30px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+@media(max-width: 680px) {
+    #page_top {
+        left: 20px;
+        bottom: 50px;
+        border: 1px solid #fff;
+        z-index: 20;
+    }
+}
 #page_top a {
     position: relative;
     display: block;
@@ -181,6 +205,11 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-55%, -55%);
+}
+@media(max-width: 1050px) {
+    #page_top a::before {
+        color: #000;
+    }
 }
 /* ----- #favorite ----- */
 .card .card-heat .btn {
