@@ -1,15 +1,15 @@
-<div class="card mb-3 col-11">
+<div class="card mb-3 col-md-11 col-12">
     <div class="row no-gutters">
-        <div class="col-md-4">
+        <div class="col-md-4 card-img">
             <a href="{{ route('articles.show', ['article' => $article]) }}"><img
                     src="{{ asset('/storage/' . $article->image) }}" alt="お酒の画像"></a>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 card-info">
             <div class="card-body d-flex flex-row">
                 <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
                     <i class="fas fa-user-circle fa-3x mr-1"></i>
                 </a>
-                <div>
+                <div class="user-info">
                     <div class="font-weight-bold">
                         <a href="{{ route('users.show', ['name' => $article->user->name]) }}"
                             class="text-dark text-decoration-none">
