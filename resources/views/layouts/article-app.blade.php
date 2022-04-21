@@ -59,14 +59,12 @@
                             </li>
                         </ul>
 
-                        @auth
-                            <ul class="navbar-nav pc">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('articles.create') }}"><i
-                                            class="fas fa-pen mr-2"></i>{{ __('投稿する') }}</a>
-                                </li>
-                            </ul>
-                        @endauth
+                        <ul class="navbar-nav pc">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('articles.create') }}"><i
+                                        class="fas fa-pen mr-2"></i>{{ __('投稿する') }}</a>
+                            </li>
+                        </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-2 auth">
