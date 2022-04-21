@@ -22,7 +22,8 @@ class UserController extends Controller
 
     public function likes(string $name)
     {
-        $user = User::where('name', $name)->first();
+        $user = User::where('name', $name)->first()
+            ->load(['likes.user', 'likes.likes']);
 
         $articles = $user->likes->sortByDesc('created_at');
 
