@@ -30,8 +30,10 @@ class ArticleController extends Controller
         $article->fill($request->all());
         $article->user_id = $request->user()->id;
 
-        $filename = $request->file('image')->store('public');
-        $article->image = str_replace('public/', '', $filename);
+        if (!empty($request->image)) {
+            $filename = $request->file('image')->store('public');
+            $article->image = str_replace('public/', '', $filename);
+        }
 
         $article->save();
 
