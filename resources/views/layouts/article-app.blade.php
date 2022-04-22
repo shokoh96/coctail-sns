@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/article.css') }}">
+
 </head>
 
 <body>
@@ -122,7 +123,27 @@
         </footer>
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ asset('js/article.js') }}"></script>
+    <script>
+        function previewImage(obj) {
+            var fileReader = new FileReader();
+            fileReader.onload = (function() {
+                document.getElementById('preview').src = fileReader.result;
+            });
+            fileReader.readAsDataURL(obj.files[0]);
+        }
+
+        jQuery(function() {
+            var pagetop = $('#page_top');
+            pagetop.hide();
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
