@@ -2,7 +2,10 @@
     <div class="row no-gutters">
         <div class="col-md-4 card-img">
             <a href="{{ route('articles.show', ['article' => $article]) }}"><img
-                    src="{{ asset('/storage/' . $article->image) }}" alt="お酒の画像"></a>
+                    @if (!empty($article->image)) src="{{ asset('/storage/' . $article->image) }}"
+                    @else
+                        src="{{ asset('img/no-image.jpg') }}" @endif
+                    alt="お酒の画像"></a>
         </div>
         <div class="col-md-8 card-info">
             <div class="card-body d-flex flex-row">
@@ -52,7 +55,8 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form method="POST" action="{{ route('articles.destroy', ['article' => $article]) }}">
+                                <form method="POST"
+                                    action="{{ route('articles.destroy', ['article' => $article]) }}">
                                     @csrf
                                     @method('DELETE')
                                     <div class="modal-body">
