@@ -18,4 +18,9 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # httpsからの通信でwww有りの場合、www無しにリダイレクト
+    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTP_HOST} ^www.japaslang.com$
+    RewriteRule ^(.*)$ https://japaslang.com/$1 [R=301,L]
 </IfModule>
