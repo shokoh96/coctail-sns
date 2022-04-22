@@ -96,7 +96,6 @@
                         <div class="top-container">
                             <div class="top-left">
                                 <div class="top-left-text">
-                                    <h1>デプロイ</h1>
                                     <p class="title">心をお酒に。</p>
                                     <h1>ここ酒</h1>
                                     <p>いまの気分でお酒を探す場所</p>
