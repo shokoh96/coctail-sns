@@ -16,9 +16,6 @@
     font-family: "せのびゴシック";
     src: url("../fonts/Senobi-Gothic-Bold.ttf");
 }
-html {
-    scroll-behavior: smooth;
-}
 textarea {
     resize: none;
 }
