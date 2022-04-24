@@ -16,9 +16,6 @@
     font-family: "せのびゴシック";
     src: url("../fonts/Senobi-Gothic-Bold.ttf");
 }
-html {
-    scroll-behavior: smooth;
-}
 .container {
     max-width: 1117px;
 }
@@ -35,6 +32,11 @@ html {
     height: 100px;
     border-bottom: 1px solid #FCE4E7;
     background-color: inherit !important;
+}
+@media (max-width: 599px) {
+    .navbar-expand-md {
+        height: 70px;
+    }
 }
 .navbar-light .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.5);
@@ -218,9 +220,9 @@ html {
         padding: 0 15px;
     }
 }
-@media (max-width: 576px) {
+@media (max-width: 599px) {
     #search-form {
-        height: 78vh;
+        height: 85vh;
         padding: 0 15px;
     }
 }
@@ -232,6 +234,11 @@ html {
     border-radius: 49px;
     top: 50%;
     transform: translateY(-50%);
+}
+@media (max-width: 599px) {
+    .search-form-container {
+        top: 45%;
+    }
 }
 .search-form-container::before {
     content: url('../img/form-left.png');
@@ -368,7 +375,9 @@ html {
 }
 @media (max-width: 680px) {
     .search-result-container h1 {
-        margin-top: 60px;
+        margin-top: 50px;
+        margin-bottom: 40px !important;
+        font-size: 30px;
     }
 }
 .cards .row {
@@ -623,6 +632,12 @@ html {
     transform: translate(-50%, -50%);
     margin: 0 auto;
 }
+@media (max-width: 576px) {
+    .not-found-container {
+        top: 45%;
+        max-width: 100%;
+    }
+}
 .not-found p {
     font-family: "せのびレギュラー";
     font-size: 35px;
@@ -636,17 +651,7 @@ html {
 }
 @media (max-width: 785px) {
     .not-found p {
-        font-size: 25px;
-    }
-}
-@media (max-width: 675px) {
-    .not-found p {
-        font-size: 23px;
-    }
-}
-@media (max-width: 576px) {
-    .not-found p {
-        font-size: 19px;
+        font-size: 24px;
     }
 }
 .not-found img {
@@ -654,7 +659,7 @@ html {
 }
 @media (max-width: 800px) {
     .not-found img {
-        width: 50%;
+        width: 70%;
     }
 }
 
