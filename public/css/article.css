@@ -36,6 +36,11 @@ textarea {
     border-bottom: 1px solid #FCE4E7;
     background-color: inherit !important;
 }
+@media (max-width: 599px) {
+    .navbar-expand-md {
+        height: 70px;
+    }
+}
 .navbar-light .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.5);
 }
