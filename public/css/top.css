@@ -243,7 +243,7 @@ body {
 }
 @media (max-width: 660px) {
     .main-top-bg {
-        height: 630px;
+        height: 650px;
         background: linear-gradient(180deg, #355469 65%, #baa68b 0%, #baa68b 100%);
     }
 }
@@ -290,10 +290,8 @@ body {
 @media (max-width: 660px) {
     .main-top::after {
         content: url(../img/top_man-300.png);
-        width: 200px;
-        top: 330px;
-        left: auto;
-        right: 10px;
+        width: 300px;
+        top: 290px;
     }
 }
 /* top-left */
@@ -340,7 +338,7 @@ body {
 @media (max-width: 660px) {
     .title {
         margin-bottom: 20px;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 h1 {
@@ -354,7 +352,7 @@ h1 {
 @media (max-width: 660px) {
     h1 {
         margin-bottom: 10px;
-        font-size: 40px;
+        font-size: 45px;
     }
 }
 h1 + p {
@@ -362,16 +360,11 @@ h1 + p {
     font-size: 21px;
     text-shadow: 4px 3px 2px rgba(0, 0, 0);
 }
-@media (max-width: 660px) {
-    h1 + p {
-        font-size: 19px;
-    }
-}
 
 /* top-right */
 @media (max-width: 660px) {
     .top-right {
-        margin-top: 135px;
+        margin-top: 173px;
     }
 }
 .top-right-text {
@@ -657,7 +650,7 @@ h1 + p {
     position: relative;
     margin-top: 400px;
 }
-@media (max-width: 860px) {
+@media (max-width: 599px) {
     .bottom-bt {
         margin-top: 500px;
     }
@@ -870,8 +863,9 @@ h1 + p {
 }
 @media (max-width: 599px) {
     .bt-contents-memory {
+        width: 100%;
         top: -140px;
-        right: 60px;
+        right: 50px;
     }
 }
 .bt-contents-memo {
@@ -882,13 +876,14 @@ h1 + p {
 }
 @media (max-width: 860px) {
     .bt-contents-memo {
-        right: 135px;
+        width: 100%;
+        right: 15px;
     }
 }
 @media (max-width: 599px) {
     .bt-contents-memo {
-        bottom: -110px;
-        right: 115px;
+        bottom: -120px;
+        right: auto;
     }
 }
 .bt-contents-search p,
@@ -902,14 +897,7 @@ h1 + p {
     .bt-contents-search p,
     .bt-contents-memory p,
     .bt-contents-memo p {
-        font-size: 19px;
-    }
-}
-@media (max-width: 599px) {
-    .bt-contents-search p,
-    .bt-contents-memory p,
-    .bt-contents-memo p {
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 .bt-contents-search p a,
@@ -924,7 +912,7 @@ h1 + p {
     .bt-contents-search p a,
     .bt-contents-memory p a,
     .bt-contents-memo p a {
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 .bt-contents-search p a:hover,
