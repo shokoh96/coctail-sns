@@ -211,7 +211,7 @@
         #search
 -------------------------------- */
 #search-form {
-    height: 75vh;
+    height: 80vh;
     padding: 0 15px;
 }
 @media (max-width: 1200px) {
