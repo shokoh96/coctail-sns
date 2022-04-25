@@ -32,14 +32,12 @@
                         ここ酒
                     </a>
 
-                    @auth
-                        <ul class="navbar-nav sp">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.create') }}"><i
-                                        class="fas fa-edit"></i></a>
-                            </li>
-                        </ul>
-                    @endauth
+                    <ul class="navbar-nav sp">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('articles.create') }}"><i
+                                    class="fas fa-edit"></i></a>
+                        </li>
+                    </ul>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

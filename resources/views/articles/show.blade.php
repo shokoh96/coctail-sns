@@ -5,9 +5,6 @@
 @section('content')
     <div class="container" id="article-show">
         <h1 class="mb-5">投稿詳細</h1>
-        <div class="back-btn text-center">
-            <a href="javascript:history.back()">戻る</a>
-        </div>
         <div class="show-container">
             @if (Auth::id() !== $article->user_id)
                 <div class="container-top">
@@ -52,7 +49,10 @@
                     </div>
                     <div class="bt-content">
                         <div class="content-left">
-                            <img src="{{ asset('/storage/' . $article->image) }}" alt="お酒の画像">
+                            <img @if (!empty($article->image)) src="{{ asset('/storage/' . $article->image) }}"
+                                @else
+                        src="{{ asset('img/no-image.jpg') }}" @endif
+                                alt="お酒の画像">
                         </div>
                         <div class="content-right">
                             <div class="tag-group">
