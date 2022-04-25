@@ -20,6 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 </head>
 
 <body>
@@ -54,7 +57,8 @@
                                 <hr>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.index') }}">{{ __('投稿一覧') }}</a>
+                                <a class="nav-link"
+                                    href="{{ route('articles.index') }}">{{ __('投稿一覧') }}</a>
                                 <hr>
                             </li>
                         </ul>
