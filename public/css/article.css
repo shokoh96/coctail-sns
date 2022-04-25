@@ -573,6 +573,11 @@ textarea {
     border: 1px solid #fce4e7;
     background: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 599px) {
+    .show-container .container-bottom {
+        padding: 20px;
+    }
+}
 .show-container .container-bottom .bt-contents {
     max-width: 800px;
     margin: 0 auto;
@@ -586,6 +591,11 @@ textarea {
 }
 #article-show .card-heat {
     font-size: 20px;
+}
+@media (max-width: 599px) {
+    #article-show .card-heat {
+        width: 52px;
+    }
 }
 #article-show .card-heat .btn {
     font-size: 20px;
@@ -761,7 +771,7 @@ textarea {
         transform: translateY(-50%);
     }
     .form-content-top .form-tp-left .file-preview #preview {
-        max-height: 240px;
+        max-height: 235px;
     }
 }
 @media (max-width: 630px) {
