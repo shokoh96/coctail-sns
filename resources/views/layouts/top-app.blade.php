@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fb677ce336.js" crossorigin="anonymous"></script>
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 </head>
 
 <body>

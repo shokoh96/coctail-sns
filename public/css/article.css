@@ -441,14 +441,18 @@ textarea {
 }
 #article-index .card .card-title,
 #user-page .card .card-title {
-    margin-bottom: 3px;
+    margin-bottom: 0;
     font-family: "Noto Serif Myanmar";
     font-weight: bold;
     text-shadow: 4px 3px 3px rgb(0 0 0 / 16%);
 }
-#article-index .card .card-title,
 #user-page .card .card-title {
-    margin-bottom: 0;
+    margin-top: 10px !important;
+}
+@media (max-width: 650px) {
+    #user-page .card .card-title {
+        margin-top: 0 !important;
+    }
 }
 #article-index .card .card-title a,
 #user-page .card .card-title a {
@@ -1036,6 +1040,27 @@ textarea {
     min-height: 85vh;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+@media (max-width: 599px) {
+    #user-page {
+        padding-top: 20px;
+    }
+}
+#user-page .user-card {
+    padding: 0;
+    background-color: rgba(255, 255, 255, .8);
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
+#user-page .user-card .fa-user-circle {
+    font-size: 3em;
+}
+.follow-btn .border-primary {
+    border-color: #4285f3 !important;
+}
+.follow-btn button,
+.follow-btn .fa-user-plus {
+    color: #4285f3;
 }
 .no-article {
     padding-top: 50px;

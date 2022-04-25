@@ -20,6 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
 </head>
 
 <body>
