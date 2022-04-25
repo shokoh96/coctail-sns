@@ -1,4 +1,4 @@
-<div class="card col-md-11 col-12 mx-auto pr-0">
+<div class="col-md-11 col-12 mx-auto pr-0 user-card">
     <div class="card-body">
         <div class="d-flex flex-row">
             <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
@@ -11,8 +11,8 @@
                 </follow-button>
             @endif
         </div>
-        <h2 class="h5 font-weight-normal card-title m-0 mt-2 ml-1">
-            <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
+        <h2 class="h4 font-weight-normal card-title m-0">
+            <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark text-decoration-none">
                 {{ $user->name }}
             </a>
         </h2>
