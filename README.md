@@ -1,61 +1,248 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# お酒検索・共有アプリ「ここ酒」
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<img width="1433" alt="kokosake" src="https://user-images.githubusercontent.com/97823218/165063604-d03c95ae-98ff-4f6a-92e8-a009602eaa14.png">
+<br><br>
 
-## About Laravel
+## １. アプリケーション概要
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**自分に合ったお酒を検索、友達やみんなとおすすめのお酒を共有できる Web アプリケーションです。**
+<br><br>
+URL ▶︎ https://sho-free.com
+<br> \*スマホからもご覧いただけます
+<br><br><br>
+20 歳になってから居酒屋や家でお酒を飲むようになりました。
+<br><br>
+ある日たまたま友達と Bar に入ったところ、
+<br><br><br>
+**「お酒の種類がありすぎてどれがいいのか分からない。」**
+<br><br>
+**「自分にあったお酒やアルコールの度数も分からない。」**
+<br><br>
+**「みんなは bar に行って何を飲むのだろうか？」**
+<br><br><br>
+など様々な困りごとに直面しました。
+<br><br>
+この時、
+<br><br><br>
+**「自分にあった、おすすめのお酒を直感的に選択することで教えてほしい。」**
+<br><br>
+**「どんな種類のお酒があるのか知りたい。」**
+<br><br>
+**「作り方が分かれば、自分の家でも作ってみんなで飲み比べしてみたい。」**
+<br><br>
+**「みんなは普段どんなお酒を飲んでいるのか知りたい。」**
+<br><br><br>
+といろいろなことを感じました。
+<br><br>
+それを実現させるために、作成したのが「ここ酒」です。
+<br><br><br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 2. テスト用アカウント
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ログイン画面から ↓<br>
+<img width="1440" alt="kokosake-login" src="https://user-images.githubusercontent.com/97823218/165081733-0db84cc8-ee04-4003-b0ce-90954f8647b0.png">
 
-## Learning Laravel
+-   **Email**:「test@test.com」
+-   **password**:「password」<br> \*テスト用アカウントを使わず、新規登録を行なってもらっても大丈夫です。
+    <br><br><br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 3. アプリの特徴
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### (1)お酒検索機能
 
-## Laravel Sponsors
+#### ① お酒検索・検索結果一覧
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**フリーワード**に入力、**お酒のベース**、**甘口-辛口**、**度数**の選択項目から選択することで、おすすめのお酒を検索してくれる機能を実装しています。
+<br>
+*ログインしていなくても利用可能です。
+<br><br>
+![kokosake1](https://user-images.githubusercontent.com/97823218/165249260-6057d0ae-19e9-4cb3-86a9-d082172173db.gif)
+<br><br>
+お酒検索の時に選択形式をメインとし、初心者でも分かる選択項目（ベース、味、度数）にしました。
+<br><br>
+*お酒の検索にヒットしなければ、下の画面が表示されます ↓<br>
+<img width="1440" alt="no-search" src="https://user-images.githubusercontent.com/97823218/165253059-a9b20e8b-9e87-48f4-bc1d-88846a793064.png">
+<br><br>
 
-### Premium Partners
+#### ② お酒検索詳細
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+検索一覧から、出てきたお酒を押すと、そのお酒の詳細画面へと遷移します。
+<br>
+お酒の詳細画面では、前半にそのお酒の情報、後半にお酒の作り方を見やすいように工夫しました。
+<br><br>
+![kokosake2](https://user-images.githubusercontent.com/97823218/165246935-9b453d70-01fc-44b7-b06f-12101c953678.gif)
+<br>
+<br>
+<br>
 
-## Contributing
+### (2)お酒共有機能(SNS)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+お酒の**投稿機能**や**いいね機能**、**フォロー機能**を実装しています。<br>
+*ログインをしていなくも、投稿一覧と投稿詳細は見ることができます。<br>
+*お酒を投稿したり、いいね機能やフォロー機能を使う場合にはログインが必要になります。
+<br><br>
 
-## Code of Conduct
+#### ① 投稿一覧・投稿詳細
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![kokosake3](https://user-images.githubusercontent.com/97823218/165258365-5aefcfd4-982a-42bd-872a-3064952e5538.gif)
+<br>
+投稿一覧画面は、すべてのユーザー投稿を最新の投稿順で表示されます。<br><br>
+また、
 
-## Security Vulnerabilities
+-   画像またはタイトルを押すと投稿の個別詳細画面へと遷移
+-   ユーザーのアイコンまたはユーザー名を押すと、投稿したユーザーのページへと遷移
+<p>します。</p>
+ハートのアイコンを押すと、いいねすることができます。<br>
+*自分の投稿であれば、投稿の右上に三点アイコンが表示され、そこから編集、削除することができます。
+<br><br>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### ② 新規投稿
 
-## License
+![article-create](https://user-images.githubusercontent.com/97823218/165262960-ff3e66aa-c0aa-484c-a1d7-3040049b7959.png)
+<br>
+新規投稿の入力欄が多いことから、名前だけ必須として他の項目は入力しなくても投稿できるようにしました。
+<br>
+投稿のハードルを下げることによって、気軽に使ってもらえれば良いなと考えました。
+<br><br>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### ③ 編集
+
+![article-edit](https://user-images.githubusercontent.com/97823218/165514015-c41fe2c3-e656-4974-a72c-1ff0878ed980.png)
+<br>
+自分の投稿したものを編集することができます。
+<br>
+新規投稿画面と見た目がほぼ同じになるため、ユーザーが迷わないようフォームの色を変更し、差別化するように工夫しました。
+<br><br><br>
+
+### (3)ユーザーページ
+
+ユーザーページに行くと、自分の投稿といいねした投稿を見ることができます。<br>
+また、フォローを押すとフォローしているユーザーが表示され、フォロワーを押すとフォロワーのユーザーが表示されます。
+![kokosake4](https://user-images.githubusercontent.com/97823218/165516960-60be4041-73be-40d9-969d-ad5ac03303a2.gif)
+<br><br><br>
+
+## 4. アプリの機能一覧
+
+### お酒検索機能(API | Cocktail -f liquor)
+
+|       機能       | 概要                                               |
+| :--------------: | -------------------------------------------------- |
+|     検索機能     | フリーワード、ベース、味、度数からお酒の検索が可能 |
+| 検索結果一覧機能 | 検索項目から、取得した検索結果一覧を表示           |
+| 検索結果詳細機能 | 検索結果の個別詳細を表示                           |
+
+### お酒共有機能(SNS)
+
+|     機能     | 概要                                                                                                                                             |
+| :----------: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 投稿一覧機能 | ・投稿された記事が最新順で表示<br>・編集画面(自分の投稿のみ)、ユーザーページ、投稿詳細へと遷移可能<br>・投稿の削除(自分の投稿のみ)、いいねが可能 |
+| 投稿詳細機能 | ・投稿の個別詳細を表示<br>・編集画面(自分の投稿のみ)、ユーザーページへと遷移可能<br>・いいねが可能                                               |
+| 新規投稿機能 | ・新規投稿が可能                                                                                                                                 |
+| 投稿編集機能 | ・投稿の編集が可能<br>・投稿の削除が可能                                                                                                         |
+
+### ユーザーページ機能
+
+| 機能               | 概要                                                                                                                                                                                     |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ユーザーページ機能 | ・ユーザーのフォロー数、フォロワー数、投稿一覧、いいね一覧を表示<br>・表示されているユーザーがログイン中のユーザー自身でなければ、ユーザーをフォロー・フォロー解除するためのボタンが表示 |
+
+### 認証機能
+
+| 機能     | 概要                                     |
+| -------- | ---------------------------------------- |
+| 認証機能 | ユーザー登録・ログイン・ログアウトが可能 |
+
+<br><br>
+
+## 5. DB 設計
+
+### ER 図
+
+<img width="791" alt="kokosake-ER" src="https://user-images.githubusercontent.com/97823218/165088255-de4a3cb5-ed57-4294-b193-5ce78cc60dc6.png">
+
+### users table
+
+|     カラム名      |        属性         |      役割      |
+| :---------------: | :-----------------: | :------------: |
+|        id         |        整数         |  ユーザー ID   |
+|       name        | 文字列/ユニーク制約 |   ユーザー名   |
+|       email       | 文字列/ユニーク制約 | メールアドレス |
+| email_verified_at |     日付と時刻      |     未使用     |
+|     password      |       文字列        |   パスワード   |
+|  remember_token   |  文字列/null 許容   |     未使用     |
+|    created_at     |     日付と時刻      |    作成日時    |
+|    updated_at     |     日付と時刻      |    更新日時    |
+
+### articles table
+
+|  カラム名  |       属性       |         役割          |
+| :--------: | :--------------: | :-------------------: |
+|     id     |       整数       |        投稿 ID        |
+|    name    |      文字列      |       タイトル        |
+|    base    | 文字列/null 許容 |        ベース         |
+|   taste    | 文字列/null 許容 |          味           |
+|  feature   | 文字列/null 許容 |         特徴          |
+|  material  | 文字列/null 許容 |        作り方         |
+|  comment   | 文字列/null 許容 |       コメント        |
+|   image    | 文字列/null 許容 |         画像          |
+|  user_id   |       整数       | 投稿したユーザーの ID |
+| created_at |    日付と時刻    |       作成日時        |
+| updated_at |    日付と時刻    |       更新日時        |
+
+### likes table
+
+|  カラム名  |    属性    |          役割           |
+| :--------: | :--------: | :---------------------: |
+|     id     |    整数    |        いいね ID        |
+|  user_id   |    整数    | いいねしたユーザーの ID |
+| article_id |    整数    |  いいねされた記事の ID  |
+| created_at | 日付と時刻 |        作成日時         |
+| updated_at | 日付と時刻 |        更新日時         |
+
+### follows table
+
+|  カラム名   |    属性    |               役割                |
+| :---------: | :--------: | :-------------------------------: |
+|     id      |    整数    |    フォロワー・非フォローの ID    |
+| follower_id |    整数    |      フォロワーのユーザー id      |
+| followee_id |    整数    | フォローされている側のユーザー id |
+| created_at  | 日付と時刻 |             作成日時              |
+| updated_at  | 日付と時刻 |             更新日時              |
+
+<br><br>
+
+## 6. 使用技術
+
+### フロントエンド
+
+-   HTML
+-   CSS
+-   jQuery 3.6.0
+-   Bootstrap 4.6.1
+-   Vue.js 2.6.11
+
+### バックエンド
+
+-   PHP 7.4.27
+-   Laravel 7.30.6
+-   MySQL 10.5.13
+-   composer
+
+### その他
+
+-   PHPMyAdmin
+-   VSCode
+-   Git / GitHub
+-   Xserver
+-   AdobeXD
+    <br><br><br>
+
+## 7. 今後実装予定の機能
+
+-   お酒検索のページネーション機能を実装
+-   お酒共有機能の新規投稿時のバリデーションエラーの表示
+-   ユーザーページのアイコンを好きな画像に変更可能にする実装
+-   パスワード再設定機能
+-   テストコードを記入して自動テスト設定
+-   Docker を導入したアプリケーション運用
+-   AWS でのデプロイ
