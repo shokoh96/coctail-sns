@@ -1,4 +1,4 @@
-# お酒検索・共有アプリ「ここ酒」
+# 🥃 お酒検索・共有アプリ「ここ酒」
 
 <img width="1433" alt="kokosake" src="https://user-images.githubusercontent.com/97823218/165063604-d03c95ae-98ff-4f6a-92e8-a009602eaa14.png">
 <br><br>
