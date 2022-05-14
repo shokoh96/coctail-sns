@@ -48,7 +48,7 @@ URL ▶︎ https://sho-free.com
 ログイン画面から ↓<br>
 <img width="1440" alt="kokosake-login" src="https://user-images.githubusercontent.com/97823218/165081733-0db84cc8-ee04-4003-b0ce-90954f8647b0.png">
 
--   **Email**:「matsuda@test.com」
+-   **Email**:「test@example.com」
 -   **password**:「password」<br> \*テスト用アカウントを使わず、新規登録を行なってもらっても大丈夫です。
     <br><br><br>
 
